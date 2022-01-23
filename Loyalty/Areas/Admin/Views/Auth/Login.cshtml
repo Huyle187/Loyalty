@@ -5,400 +5,59 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Login Loyalty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poiret+One&family=Quicksand:wght@300;400&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="~/Areas/Admin/Public/css/Style.css" rel="stylesheet" />
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.css">
+
+    <!-- iCheck -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/OverlayScrollbars.min.js">
+    <!-- Daterange picker -->
+    <link href="~/Areas/Admin/Public/css/daterangepicker.css" rel="stylesheet" />
+    <!-- summernote -->
+    <link href="~/Areas/Admin/Public/css/summernote-bs4.min.css" rel="stylesheet" />
 </head>
-
-<body>
-    <div id="n__Log_in">
-        <svg class="Rectangle_1">
-            <rect id="Rectangle_1" rx="8" ry="8" x="0" y="0" width="100%" height="100%">
-            </rect>
-        </svg>
-        <div id="LOGIN">
-            <span>LOGIN</span>
-        </div>
-        <svg class="Rectangle_6">
-            <rect id="Rectangle_6" rx="0" ry="0" x="0" y="0" width="8" height="33">
-            </rect>
-        </svg>
-        @*<svg class="Path_9" viewBox="0 0 446.452 80">
-                <path id="Path_9" d="M 0 0 L 446.4515991210938 0 L 446.4515991210938 79.99999237060547 L 0 79.99999237060547 L 0 0 Z">
-                </path>
-            </svg>*@
-        @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { @enctype = "multipart/form-data" }))
-        {
-            @Html.AntiForgeryToken()
-            <div id="examplealtacomvn">
-                <span>
-                    <input type="text" name="email" value="example@alta.com.vn" />
-                </span>
-            </div>
-            <div id="PASSWORD">
-                <span>
-                    PASSWORD<br />
-                    <input type="text" name="password" value="" />
-                </span>
-            </div>
-            <div id="EMAIL">
-                <span>EMAIL</span>
-            </div>
-            <svg class="Rectangle_357">
-                <rect id="Rectangle_357" rx="0" ry="0" x="0" y="0" width="112" height="36">
-                </rect>
-            </svg>
-            <div id="Group_568">
-                <span>
-                    <input type="submit" value="Login" id="buttonLogin">
-                </span>
-                <div id="Group_482">
-                    <svg class="Path_10" viewBox="170.666 0 15.344 24">
-                        <path id="Path_10" d="M 184.091796875 0 L 172.5840148925781 0 C 171.5262298583984 0 170.6660461425781 0.8969531059265137 170.6660461425781 2.000015735626221 L 170.6660461425781 5.500031471252441 C 170.6660461425781 5.776405811309814 170.8805084228516 6.000047206878662 171.1455383300781 6.000047206878662 C 171.4105834960938 6.000047206878662 171.6250305175781 5.776406764984131 171.6250305175781 5.500031471252441 L 171.6250305175781 2.000015735626221 C 171.6250305175781 1.448765635490417 172.0553588867188 1.000031232833862 172.5840148925781 1.000031232833862 L 184.091796875 1.000031232833862 C 184.6204528808594 1.000031232833862 185.05078125 1.448765635490417 185.05078125 2.000015735626221 L 185.05078125 22.00002861022949 C 185.05078125 22.5512809753418 184.6204528808594 23.00001525878906 184.091796875 23.00001525878906 L 172.5840148925781 23.00001525878906 C 172.0553588867188 23.00001525878906 171.6250305175781 22.5512809753418 171.6250305175781 22.00002861022949 L 171.6250305175781 18.50001525878906 C 171.6250305175781 18.22364044189453 171.4105834960938 18 171.1455383300781 18 C 170.8805084228516 18 170.6660461425781 18.22364044189453 170.6660461425781 18.50001525878906 L 170.6660461425781 22.00002861022949 C 170.6660461425781 23.1030445098877 171.5262145996094 24.00004386901855 172.5840148925781 24.00004386901855 L 184.091796875 24.00004386901855 C 185.1495819091797 23.99999809265137 186.009765625 23.1030445098877 186.009765625 21.9999828338623 L 186.009765625 2.000015735626221 C 186.009765625 0.8969531059265137 185.1495819091797 0 184.091796875 0 Z">
-                        </path>
-                    </svg>
-                    <svg class="Path_11" viewBox="0 128.003 17.762 14.508">
-                        <path id="Path_11" d="M 11.01434803009033 141.4601440429688 C 10.8134183883667 141.6856384277344 10.79995632171631 142.0681610107422 10.98400211334229 142.3143463134766 C 11.08132362365723 142.4442443847656 11.2143030166626 142.5103149414062 11.34779357910156 142.5103149414062 C 11.46680641174316 142.5103149414062 11.58628177642822 142.4577789306641 11.68119812011719 142.3515167236328 L 17.60176658630371 135.7021331787109 C 17.70389938354492 135.5876007080078 17.76171875 135.4258575439453 17.76171875 135.2564086914062 C 17.76171875 135.0869750976562 17.70389938354492 134.9252319335938 17.60176658630371 134.8106994628906 L 11.68119812011719 128.1613006591797 C 11.47929382324219 127.9358062744141 11.16855907440186 127.9529113769531 10.98400211334229 128.1984710693359 C 10.79995536804199 128.4446563720703 10.81341743469238 128.8271789550781 11.01434803009033 129.0526733398438 L 16.00011444091797 134.6519012451172 L 0.4933964610099792 134.6519012451172 C 0.2206800878047943 134.6519012451172 1.89080395784913e-09 134.9222869873047 1.89080395784913e-09 135.2564086914062 C 1.89080395784913e-09 135.5905456542969 0.2206800878047943 135.8609161376953 0.4933964610099792 135.8609161376953 L 16.00015830993652 135.8609161376953 L 11.01434803009033 141.4601440429688 Z">
-                        </path>
-                    </svg>
+<div id="particles-js"></div>
+<body class="login">
+    <div class="container">
+        <div class="login-container-wrapper clearfix">
+            <div class="welcome"><strong>Loyalty Program</strong></div>
+            @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group relative">
+                    <input name="email" id="login_username" class="form-control input-lg" type="email" placeholder="Email">
                 </div>
-            </div>
-        }
-        <div id="Forgot_password">
-            <span>Forgot password?</span>
-        </div>
-        @*<svg class="Path_8" viewBox="0 0 446.452 80">
-                <path id="Path_8" d="M 0 0 L 446.4515991210938 0 L 446.4515991210938 79.99999237060547 L 0 79.99999237060547 L 0 0 Z">
-                </path>
-            </svg>*@
-        <svg class="Rectangle_4">
-            <rect id="Rectangle_4" rx="0" ry="0" x="0" y="0" width="6" height="80">
-            </rect>
-        </svg>
-        <svg class="Path_12" viewBox="1810.156 273.003 1 1">
-            <path id="Path_12" d="M 1810.155639648438 273.0034790039062">
-            </path>
-        </svg>
-        <div id="Loyalty_Program">
-            <span>Loyalty Program</span>
+                <div class="form-group relative password">
+                    <input name="password" id="login_password" class="form-control input-lg" type="password" placeholder="Password">
+                </div>
+                <div class="checkbox pull-right">
+                    <label> <a class="forget" href="" title="forget">Forgot password?</a> </label>
+                </div>
+                <div class="form-group ">
+                    <button type="submit" class="btn btn-primary" style="float: right; background-color: #003768">
+                        Login <i class="fa fa-sign-in"></i>
+                    </button>
+                </div>
+            }
         </div>
     </div>
 </body>
 </html>
-<style>
-    .mediaViewInfo {
-        --web-view-name: 0. Log in;
-        --web-view-id: n__Log_in;
-        --web-scale-on-resize: true;
-        --web-enable-deep-linking: true;
-    }
-
-    :root {
-        --web-view-ids: n__Log_in;
-    }
-
-    #n__Log_in {
-        position: absolute;
-        width: 1920px;
-        height: 1080px;
-        background-color: rgba(239,242,249,1);
-        overflow: hidden;
-        --web-animation: fadein 0.30000001192092896s ease-out;
-        --web-action-type: page;
-        --web-action-target: 1__Dashboard.html;
-        cursor: pointer;
-        --web-view-name: 0. Log in;
-        --web-view-id: n__Log_in;
-        --web-scale-on-resize: true;
-        --web-enable-deep-linking: true;
-    }
-
-    #LOGIN {
-        left: 777.186px;
-        top: 513px;
-        position: absolute;
-        overflow: visible;
-        width: 87px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        color: rgba(206,206,206,1);
-        letter-spacing: 1px;
-    }
-
-    #buttonLogin {
-        background-color: #003768;
-        width: 99px;
-        height: 31px;
-        color: white;
-        font-size: 17px;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        letter-spacing: 0.5px;
-        border: 0px solid;
-    }
-
-    #Login {
-        left: 0px;
-        top: 1.5px;
-        position: absolute;
-        overflow: visible;
-        width: 48px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        color: rgba(239,242,249,1);
-        letter-spacing: 0.5px;
-    }
-
-    #Rectangle_1 {
-        fill: rgba(255,255,255,1);
-    }
-
-    .Rectangle_1 {
-        filter: drop-shadow(0px 3px 80px rgba(48, 101, 181, 0.102));
-        position: absolute;
-        overflow: visible;
-        width: 1220px;
-        height: 900px;
-        left: 420.186px;
-        top: 109px;
-    }
-
-    #Rectangle_4 {
-        fill: rgba(27,86,154,1);
-    }
-
-    .Rectangle_4 {
-        position: absolute;
-        overflow: visible;
-        width: 6px;
-        height: 80px;
-        left: 737.186px;
-        top: 581px;
-    }
-
-    #Rectangle_357 {
-        fill: rgba(0,55,104,1);
-        stroke: rgba(112,112,112,1);
-        stroke-width: 1px;
-        stroke-linejoin: miter;
-        stroke-linecap: butt;
-        stroke-miterlimit: 4;
-        shape-rendering: auto;
-    }
-
-    .Rectangle_357 {
-        position: absolute;
-        overflow: visible;
-        width: 112px;
-        height: 36px;
-        left: 1068px;
-        top: 842px;
-    }
-
-    #Rectangle_6 {
-        fill: rgba(201,209,217,1);
-    }
-
-    .Rectangle_6 {
-        position: absolute;
-        overflow: visible;
-        width: 8px;
-        height: 33px;
-        left: 737.186px;
-        top: 515px;
-    }
-
-    #Path_8 {
-        fill: rgba(255,255,255,1);
-    }
-
-    .Path_8 {
-        filter: drop-shadow(0px 12px 40px rgba(0, 0, 0, 0.078));
-        overflow: visible;
-        position: absolute;
-        width: 566.452px;
-        height: 200px;
-        left: 737.577px;
-        top: 580.757px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-
-    #Path_9 {
-        fill: rgba(255,255,255,1);
-    }
-
-    .Path_9 {
-        filter: drop-shadow(0px 12px 40px rgba(0, 0, 0, 0.078));
-        overflow: visible;
-        position: absolute;
-        width: 566.452px;
-        height: 200px;
-        left: 737.186px;
-        top: 665.539px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-
-    #Path_10 {
-        fill: rgba(239,242,249,1);
-    }
-
-    .Path_10 {
-        overflow: visible;
-        position: absolute;
-        width: 15.344px;
-        height: 24px;
-        left: 4.656px;
-        top: 0px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-
-    #Path_11 {
-        fill: rgba(239,242,249,1);
-    }
-
-    .Path_11 {
-        overflow: visible;
-        position: absolute;
-        width: 17.762px;
-        height: 14.508px;
-        left: 0px;
-        top: 4.746px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-
-    #Path_12 {
-        fill: transparent;
-        stroke: rgba(112,112,112,1);
-        stroke-width: 1px;
-        stroke-linejoin: miter;
-        stroke-linecap: butt;
-        stroke-miterlimit: 4;
-        shape-rendering: auto;
-    }
-
-    .Path_12 {
-        overflow: visible;
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        left: 1810.156px;
-        top: 272.003px;
-        transform: matrix(1,0,0,1,0,0);
-    }
-
-    #PASSWORD {
-        left: 768.795px;
-        top: 695px;
-        position: absolute;
-        overflow: visible;
-        width: 79px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: rgba(112,112,112,1);
-        letter-spacing: 0.5px;
-    }
-
-    #Forgot_password {
-        left: 768.795px;
-        top: 766px;
-        position: absolute;
-        overflow: visible;
-        width: 121px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: rgba(27,86,154,1);
-        letter-spacing: 0.5px;
-        text-decoration: underline;
-    }
-
-    #EMAIL {
-        opacity: 0.5;
-        left: 769.186px;
-        top: 588px;
-        position: absolute;
-        overflow: visible;
-        width: 43px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        color: rgba(112,112,112,1);
-        letter-spacing: 0.5px;
-    }
-
-    #examplealtacomvn {
-        left: 769.186px;
-        top: 609px;
-        position: absolute;
-        overflow: visible;
-        width: 191px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        color: rgba(112,112,112,1);
-        letter-spacing: 0.5px;
-    }
-
-    #Loyalty_Program {
-        left: 751px;
-        top: 282px;
-        position: absolute;
-        overflow: visible;
-        width: 346px;
-        white-space: nowrap;
-        text-align: left;
-        font-family: UVF Pistilli;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 48px;
-        color: rgba(0,89,149,1);
-    }
-
-    #Group_568 {
-        position: absolute;
-        width: 85.37px;
-        height: 24px;
-        left: 1079.807px;
-        top: 846.992px;
-        overflow: visible;
-    }
-
-    #Group_482 {
-        position: absolute;
-        width: 20px;
-        height: 24px;
-        left: 65.37px;
-        top: 0px;
-        overflow: visible;
-    }
-</style>
