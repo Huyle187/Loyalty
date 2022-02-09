@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AuthController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -131,9 +132,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Public\css\daterangepicker.css" />
-    <Content Include="Areas\Admin\Public\css\sb-admin-2.min.css" />
     <Content Include="Areas\Admin\Public\css\Style.css" />
-    <Content Include="Areas\Admin\Public\js\sb-admin-2.min.js" />
+    <Content Include="Areas\Admin\Public\css\summernote-bs4.min.css" />
+    <Content Include="Areas\Admin\Public\images\AdminLTELogo.png" />
+    <Content Include="Areas\Admin\Public\js\adminlte.js" />
+    <Content Include="Areas\Admin\Public\js\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Admin\Public\js\Chart.min.js" />
+    <Content Include="Areas\Admin\Public\js\dashboard.js" />
+    <Content Include="Areas\Admin\Public\js\daterangepicker.js" />
+    <Content Include="Areas\Admin\Public\js\demo.js" />
+    <Content Include="Areas\Admin\Public\js\jquery-ui.min.js" />
+    <Content Include="Areas\Admin\Public\js\jquery.knob.min.js" />
+    <Content Include="Areas\Admin\Public\js\jquery.min.js" />
+    <Content Include="Areas\Admin\Public\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="Areas\Admin\Public\js\jquery.vmap.min.js" />
+    <Content Include="Areas\Admin\Public\js\jquery.vmap.usa.js" />
+    <Content Include="Areas\Admin\Public\js\moment.min.js" />
+    <Content Include="Areas\Admin\Public\js\sparkline.js" />
+    <Content Include="Areas\Admin\Public\js\summernote-bs4.min.js" />
+    <Content Include="Areas\Admin\Public\js\tempusdominus-bootstrap-4.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -149,7 +166,7 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Auth\Login.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
-    <Content Include="Areas\Admin\Public\css\summernote-bs4.min.css" />
+    <Content Include="Areas\Admin\Views\Auth\Forgot_password.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -179,6 +196,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

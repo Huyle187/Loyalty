@@ -172,7 +172,7 @@ body.login {
 .login input[type="password"],
 .login input:focus {
     background-color: #fff;
-    color: #eee;
+    color: black;
     border-left: 4px solid rgb(201, 199, 199);
 }
 
