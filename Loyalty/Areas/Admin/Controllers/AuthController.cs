@@ -69,6 +69,12 @@ namespace Loyalty.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            Session["UserAdmin"] = "";
+            return RedirectToAction("Login", "Auth");
+        }
+
         // Admin/Auth/Forgot_password
         public ActionResult Forgot_password()
         {
