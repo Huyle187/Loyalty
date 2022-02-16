@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Loyalty.Areas.Admin.DAO;
+using Loyalty.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,9 @@ namespace Loyalty.Areas.Admin.Controllers
 {
     public class AuthController : Controller
     {
+        private LoyaltyEntities db = new LoyaltyEntities();
+        private userDAO userDAO = new userDAO();
+
         // GET: Admin/Auth
         public ActionResult Login()
         {
@@ -21,6 +26,8 @@ namespace Loyalty.Areas.Admin.Controllers
             string error = "";
             string user = filed["email"];
             string password = filed["password"];
+
+            Account acc = userDAO.getRow(user);
             if (user == "")
             {
                 if (password == "")
@@ -40,12 +47,19 @@ namespace Loyalty.Areas.Admin.Controllers
                 }
                 else
                 {
-                    if (user == "admin@gmail.com")
+                    if (acc != null)
                     {
-                        if (password == "123456")
+                        if (acc.password.Equals(password))
                         {
-                            Session["UserAdmin"] = "admin@gmail.com";
-                            return RedirectToAction("Index", "Dashboard");
+                            if (acc.enable == 1)
+                            {
+                                Session["UserAdmin"] = acc.email;
+                                return RedirectToAction("Index", "Dashboard");
+                            }
+                            else
+                            {
+                                error = "Tài khoản của bạn đang bị khóa!";
+                            }
                         }
                         else
                         {
@@ -54,7 +68,7 @@ namespace Loyalty.Areas.Admin.Controllers
                     }
                     else
                     {
-                        if (password != "123456")
+                        if (!acc.password.Equals(password))
                         {
                             error = "Email và mật khẩu không chính xác!";
                         }

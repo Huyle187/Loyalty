@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="340ddfc8e0e1481eac2061e5b0a3eed9" Name="Diagram1">
+        <EntityTypeShape EntityType="LoyaltyModel.Account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.Campaign" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.Collection" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.Customer" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.Product" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.ProductImage" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.Store" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoyaltyModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="LoyaltyModel.FK_Campaign_Collection" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Campaign_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Campaign_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Collection_Campaign" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Store_Campaign" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Collection_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Customer_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_Customer_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="LoyaltyModel.FK_ProductImages_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
