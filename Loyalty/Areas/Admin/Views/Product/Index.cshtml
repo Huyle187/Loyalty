@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Product";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model List<Loyalty.Models.Product>
+
+<link href="~/Areas/Admin/Public/css/Product/productStyle.css" rel="stylesheet" />
+
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-light" style="background-color: #f4f6f9;border-bottom: 0px">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+            <div class="navbar-search">
+            </div>
+        </li>
+    </ul>
+    <div class="others" style="flex: none">
+        <li><i class="fas fa-search"></i></li>
+        <li><a class="fa fa-user" @Html.ActionLink("LOGGED IN USER", "Logout", "Auth")> </a> </li>
+    </div>
+</nav>
+<!-- /.navbar -->
+
+<div class="content-wrapper">
+    <br />
+    <div class="col-md-6 ">
+        <strong style="font-family: 'Segoe UI'">Product &ensp; </strong>
+        <strong style="font-family: 'Segoe UI'"> >&ensp; All Product</strong>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="col-md-6 ">
+        <select style="height: 33px;">
+            <option value="p">PepsiCan</option>
+            <option value="c">CocaCan</option>
+            <option value="s">StingCan</option>
+        </select>
+        <select style="height: 33px;">
+            <option value="r">Reward Gift</option>
+        </select>
+        <a class="btn btn-sm btn-primary" href="@Url.Action("SearchProduct", "Product")" style="stroke: grey; fill: white">
+            <i class="fas fa-search"></i> search
+        </a>
+    </div>
+
+    <br />
+
+    <div class="card-header">
+        <div class="row">
+
+            <div class="col-md-12 text-right">
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+                      action="@Url.Action("Search","Product")" method="get">
+                    <div class="input-group">
+                        <div class="input-group mb-4 border rounded-pill p-1" style="background-color:white; width:500px">
+                            <div class="input-group-prepend border-0">
+                                <button id="button-addon4" type="submit" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+                            </div>
+                            <input type="search" name="searchProductText" placeholder="What're you searching for?" aria-describedby="button-addon4" class="form-control bg-none border-0">
+                        </div>
+                    </div>
+                </form>
+                <a class="btn btn-sm btn-success" href="@Url.Action("Create", "Product")">
+                    <i class="fas fa-plus"></i> New Product
+                </a>
+
+                <a class="btn btn-sm btn-primary" href="@Url.Action("", "")">
+                    <i class="fas fa-cloud-upload"></i> Import from csv
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Content Header (Page header) -->
+    <div class=" container-fluid">
+        <div class="col-md-12">
+            <!-- Main content -->
+            <div class="content">
+                <!-- Main row -->
+                <div class="row">
+                    <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                    <!-- TABLE: LATEST ORDERS -->
+                    <div class="col-md-12 card">
+                        <div class="card-header border-transparent">
+                            <!-- /.card-header -->
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="" name="" data-val="true" data-val-required="The IsChecked field is required." value="">
+                                                </th>
+                                                <th>Images</th>
+                                                <th>Product Name</th>
+                                                <th>SKU</th>
+                                                <th>Inventory</th>
+                                                <th>Import Date</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" id="" name="" data-val="true" data-val-required="The IsChecked field is required." value="">
+                                                    </td>
+                                                    <td>
+                                                        <img src="~/Areas/Admin/Public/images/@Html.DisplayFor(modelItem => item.image)" style="width: 60px; height: 60px" />
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.productName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.SKU)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.oldStock) in stock
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.importDate)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-sm btn-info" href="@Url.Action("Update", "Product", new { id = item.productID })">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-sm btn-danger" href="@Url.Action("Deltrash", "Product", new { id = item.productID })">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

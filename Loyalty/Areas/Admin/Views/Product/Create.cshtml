@@ -1,0 +1,388 @@
+﻿@model Loyalty.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Areas/Admin/Public/css/Product/AddNewStyle.css" rel="stylesheet" />
+<script src="~/Areas/Admin/Public/js/Product/Style.js"></script>
+@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div id="n_2_Add_Product_Fill">
+        <img id="n_324" src="" @*srcset="n_324.png 1x, n_324@2x.png 2x"*@>
+
+        <div id="Group_350">
+            <svg class="Rectangle_307">
+                <rect id="Rectangle_307" rx="3" ry="3" x="0" y="0" width="74" height="30">
+                </rect>
+            </svg>
+            <div id="Remove_bmu">
+                <span>Remove</span>
+            </div>
+        </div>
+        <div id="New_Product_bmv">
+            <span>New Product</span>
+        </div>
+        <div id="Name_bmw">
+            <span>Name</span>
+        </div>
+        <div id="Group_502">
+            <div class="Rectangle_310">
+                <rect id="Rectangle_310" rx="6" ry="6" x="0" y="0" width="767" height="36">
+                    @Html.EditorFor(model => model.productName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.productName, "", new { @class = "text-danger" })
+                </rect>
+            </div>
+        </div>
+        <div id="Market_bm">
+            <span>Market</span>
+        </div>
+        <div id="price">
+            <span>Price</span>
+        </div>
+        @* Input Price *@
+        <dive class="Rectangle_313">
+            <rect id="Rectangle_313" rx="6" ry="6" x="0" y="0" width="726" height="36">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </rect>
+        </dive>
+        <div class="Icon_awesome-check-square_bm" viewBox="0 2.25 16 16">
+            <input type="checkbox" name="imageCheckBox" value="" />
+        </div>
+        <div id="Use_as_default_image">
+            <span>Use as default image</span>
+        </div>
+        <div id="Group_497">
+            <div class="Rectangle_311_bm">
+                <rect id="Rectangle_311_bm" rx="6" ry="6" x="0" y="0" width="767" height="36">
+                    @Html.EditorFor(model => model.Market, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Market, "", new { @class = "text-danger" })
+                </rect>
+            </div>
+            <svg class="Icon_feather-chevron-down_bm" viewBox="9 13.5 11.39 4.5">
+                <path id="Icon_feather-chevron-down_bm" d="M 9 13.5 L 14.695068359375 18 L 20.39013671875 13.5">
+                </path>
+            </svg>
+        </div>
+        <div id="Low_stock_level">
+            <span>Low stock level</span>
+        </div>
+        <div id="VN">
+            <span>VNĐ</span>
+        </div>
+        <svg class="Line_118" viewBox="0 0 929 1">
+            <path id="Line_118" d="M 0 0 L 929 1">
+            </path>
+        </svg>
+        <svg class="Line_119" viewBox="0 0 929 0.5">
+            <path id="Line_119" d="M 0 0 L 929 0">
+            </path>
+        </svg>
+        <div id="SKU_bne">
+            <span>SKU</span>
+        </div>
+        <div id="Trang_thm_mi_sn_phm_v_sa_i_thn">
+            <span>Trang thêm mới sản phẩm và sửa đổi thông tin sản phẩm</span>
+        </div>
+        <div id="n_v_tin_t_t_ng_thay_i_da_vo_Ma">
+            <span>Đơn vị tiền tệ tự động thay đổi<br />dựa vào Market (thị trường) của sản phẩm</span>
+        </div>
+        <div id="Group_373_bnh">
+            <div id="Product_bni">
+                <span>Product</span>
+            </div>
+            <div id="n___All_Product_bnj">
+                <span>>   All Product</span>
+            </div>
+            <div id="n___Add_new_Product">
+                <span>>   Add new Product</span>
+            </div>
+        </div>
+        <div id="PPBPC01VN_bnl">
+            <span>SKUPPBPC01VN</span>
+        </div>
+        <div id="M_SKU_t_ng_hin_th_da_theo_thng">
+            <span>Mã SKU tự động hiển thị dựa theo thông tin đã nhập</span>
+        </div>
+        <img id="n__sL-rFeucrpLyj7fI" src="~/Areas/Admin/Public/images/n__sL-rFeucrpLyj7fI.png">
+        <div id="Click_vo_hnh__hin_th">
+            <span>Click vào hình để hiển thị</span>
+        </div>
+
+        <div id="Group_496">
+            <div class="Rectangle_342">
+                <rect id="Rectangle_342" rx="0" ry="0" x="0" y="0" width="70" height="70">
+                    Image: <input type="file" name="imageProduct" id="pickupImage" />
+                    @Html.HiddenFor(model => model.image, new { @class = "ImagePath" })
+                </rect>
+            </div>
+            @*<div id="Icon_ionic-ios-add-circle-outl_bos">
+                    <svg class="Path_37" viewBox="10.512 10.512 14.977 14.977">
+                        <path id="Path_37" d="M 24.36328125 16.875 L 19.125 16.875 L 19.125 11.63671875 C 19.125 11.01796913146973 18.61874961853027 10.51171875 18 10.51171875 C 17.38125038146973 10.51171875 16.875 11.01796913146973 16.875 11.63671875 L 16.875 16.875 L 11.63671875 16.875 C 11.01796913146973 16.875 10.51171875 17.296875 10.51171875 18 C 10.51171875 18.703125 11.0390625 19.125 11.63671875 19.125 C 12.234375 19.125 16.875 19.125 16.875 19.125 C 16.875 19.125 16.875 23.6953125 16.875 24.36328125 C 16.875 25.03125 17.3671875 25.48828125 18 25.48828125 C 18.6328125 25.48828125 19.125 24.98203086853027 19.125 24.36328125 L 19.125 19.125 L 24.36328125 19.125 C 24.98203086853027 19.125 25.48828125 18.61874961853027 25.48828125 18 C 25.48828125 17.38125038146973 24.98203086853027 16.875 24.36328125 16.875 Z">
+                        </path>
+                    </svg>
+                    <svg class="Path_38" viewBox="3.375 3.375 29.25 29.25">
+                        <path id="Path_38" d="M 18 5.34375 C 21.38203048706055 5.34375 24.56015586853027 6.658593654632568 26.95078086853027 9.049219131469727 C 29.34140586853027 11.43984413146973 30.65625 14.61796855926514 30.65625 18 C 30.65625 21.38203048706055 29.34140586853027 24.56015586853027 26.95078086853027 26.95078086853027 C 24.56015586853027 29.34140586853027 21.38203048706055 30.65625 18 30.65625 C 14.61796855926514 30.65625 11.43984413146973 29.34140586853027 9.049219131469727 26.95078086853027 C 6.658593654632568 24.56015586853027 5.34375 21.38203048706055 5.34375 18 C 5.34375 14.61796951293945 6.658593654632568 11.43984413146973 9.049219131469727 9.049219131469727 C 11.43984413146973 6.658593654632568 14.61796855926514 5.34375 18 5.34375 M 18 3.375 C 9.921093940734863 3.375 3.375 9.921093940734863 3.375 18 C 3.375 26.07890701293945 9.921093940734863 32.625 18 32.625 C 26.07890701293945 32.625 32.625 26.07890701293945 32.625 18 C 32.625 9.921092987060547 26.07890701293945 3.375 18 3.375 L 18 3.375 Z">
+                        </path>
+                    </svg>
+                </div>*@
+            @*<div id="Add_an_image">
+                    <span>Add an image</span>
+                </div>*@
+        </div>
+        <div id="Group_492">
+            <svg class="Rectangle_345">
+                <rect id="Rectangle_345" rx="0" ry="0" x="0" y="0" width="75" height="75">
+                </rect>
+            </svg>
+            <svg class="Icon_metro-image" viewBox="2.571 3.856 40 40">
+                <path id="Icon_metro-image" d="M 40.0661735534668 6.713210105895996 C 40.06773376464844 6.714727401733398 40.06937408447266 6.71660327911377 40.07070159912109 6.718388557434082 L 40.07070159912109 40.99383544921875 C 40.06937408447266 40.99562072753906 40.06773376464844 40.99749755859375 40.0661735534668 40.9990119934082 L 5.075153827667236 40.9990119934082 C 5.073536396026611 40.99744415283203 5.07204532623291 40.99571228027344 5.07070255279541 40.99383163452148 L 5.070700645446777 6.71829891204834 C 5.072028636932373 6.716512680053711 5.073669910430908 6.714637756347656 5.075153827667236 6.713210105895996 L 40.0661735534668 6.713210105895996 Z M 40.07070159912109 3.856067180633545 L 5.070702075958252 3.856067180633545 C 3.695702075958252 3.856067180633545 2.570702075958252 5.141781330108643 2.570702075958252 6.713210105895996 L 2.570702075958252 40.99892425537109 C 2.570702075958252 42.57035446166992 3.695702075958252 43.8560676574707 5.070702075958252 43.8560676574707 L 40.07070159912109 43.8560676574707 C 41.44570159912109 43.8560676574707 42.57070159912109 42.57035446166992 42.57070159912109 40.99892425537109 L 42.57070159912109 6.713210105895996 C 42.57070159912109 5.141781330108643 41.44570159912109 3.856067180633545 40.07070159912109 3.856067180633545 Z M 35.07070159912109 13.85606670379639 C 35.07070159912109 16.22303009033203 33.39179229736328 18.14178276062012 31.32070159912109 18.14178276062012 C 29.24961090087891 18.14178276062012 27.57070350646973 16.22303199768066 27.57070350646973 13.85606861114502 C 27.57070350646973 11.48910427093506 29.24961090087891 9.570353507995605 31.32070159912109 9.570353507995605 C 33.39179229736328 9.570353507995605 35.07070159912109 11.48910331726074 35.07070159912109 13.85606861114502 Z M 37.57070159912109 38.14178466796875 L 7.570700168609619 38.14178466796875 L 7.570700168609619 32.42749786376953 L 16.32070159912109 15.28463935852051 L 26.32070159912109 29.57035255432129 L 28.82070159912109 29.57035255432129 L 37.57070159912109 20.99892425537109 L 37.57070159912109 38.14178466796875 Z">
+                </path>
+            </svg>
+        </div>
+        <div id="Group_493">
+            <svg class="Rectangle_345_bo">
+                <rect id="Rectangle_345_bo" rx="0" ry="0" x="0" y="0" width="75" height="75">
+                </rect>
+            </svg>
+            <svg class="Icon_metro-image_bo" viewBox="2.571 3.856 40 40">
+                <path id="Icon_metro-image_bo" d="M 40.0661735534668 6.713210105895996 C 40.06773376464844 6.714727401733398 40.06937408447266 6.71660327911377 40.07070159912109 6.718388557434082 L 40.07070159912109 40.99383544921875 C 40.06937408447266 40.99562072753906 40.06773376464844 40.99749755859375 40.0661735534668 40.9990119934082 L 5.075153827667236 40.9990119934082 C 5.073536396026611 40.99744415283203 5.07204532623291 40.99571228027344 5.07070255279541 40.99383163452148 L 5.070700645446777 6.71829891204834 C 5.072028636932373 6.716512680053711 5.073669910430908 6.714637756347656 5.075153827667236 6.713210105895996 L 40.0661735534668 6.713210105895996 Z M 40.07070159912109 3.856067180633545 L 5.070702075958252 3.856067180633545 C 3.695702075958252 3.856067180633545 2.570702075958252 5.141781330108643 2.570702075958252 6.713210105895996 L 2.570702075958252 40.99892425537109 C 2.570702075958252 42.57035446166992 3.695702075958252 43.8560676574707 5.070702075958252 43.8560676574707 L 40.07070159912109 43.8560676574707 C 41.44570159912109 43.8560676574707 42.57070159912109 42.57035446166992 42.57070159912109 40.99892425537109 L 42.57070159912109 6.713210105895996 C 42.57070159912109 5.141781330108643 41.44570159912109 3.856067180633545 40.07070159912109 3.856067180633545 Z M 35.07070159912109 13.85606670379639 C 35.07070159912109 16.22303009033203 33.39179229736328 18.14178276062012 31.32070159912109 18.14178276062012 C 29.24961090087891 18.14178276062012 27.57070350646973 16.22303199768066 27.57070350646973 13.85606861114502 C 27.57070350646973 11.48910427093506 29.24961090087891 9.570353507995605 31.32070159912109 9.570353507995605 C 33.39179229736328 9.570353507995605 35.07070159912109 11.48910331726074 35.07070159912109 13.85606861114502 Z M 37.57070159912109 38.14178466796875 L 7.570700168609619 38.14178466796875 L 7.570700168609619 32.42749786376953 L 16.32070159912109 15.28463935852051 L 26.32070159912109 29.57035255432129 L 28.82070159912109 29.57035255432129 L 37.57070159912109 20.99892425537109 L 37.57070159912109 38.14178466796875 Z">
+                </path>
+            </svg>
+        </div>
+        <div id="Hin_th_hnh_c_chn">
+            <span>Hiển thị hình được chọn</span>
+        </div>
+        <img id="n_324_bo" src="" @*srcset="n_324_bo.png 1x, n_324_bo@2x.png 2x"*@>
+
+        <div id="Net_weight">
+            <span>Net weight</span>
+        </div>
+        <div class="Icon_awesome-check-square_bo" viewBox="0 2.25 16 16">
+            <input type="checkbox" id="checkBoxWeight" data-val="true" data-val-required="The IsChecked field is required." name="WeightChecked" value="true">
+            @*<input name="WeightChecked" type="hidden" value="false">*@
+        </div>
+
+        @* Input Net Weight *@
+
+        <div class="Rectangle_346">
+            <rect id="Rectangle_346" rx="6" ry="6" x="0" y="0" width="295" height="36">
+                @Html.EditorFor(model => model.netWeight, new { htmlAttributes = new { @class = "form-control", id = "weightText" } });
+                @Html.ValidationMessageFor(model => model.netWeight, "", new { @class = "text-danger" })
+            </rect>
+        </div>
+
+        <div id="Group_498">
+            <svg class="Rectangle_311_bo">
+                <rect id="Rectangle_311_bo" rx="6" ry="6" x="0" y="0" width="72" height="36">
+                </rect>
+            </svg>
+            <div id="ml">
+                <span>
+                    <select name="weight">
+                        <option value="ml">ml</option>
+                        <option value="l">l</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <div id="Group_521">
+            <div class="Icon_feather-square_bpd" viewBox="4.5 4.5 16 16">
+                <path id="Icon_feather-square_bpd" d="M 6.277778148651123 4.5 L 18.72222328186035 4.5 C 19.70406341552734 4.5 20.50000190734863 5.295937538146973 20.50000190734863 6.277777194976807 L 20.50000190734863 18.72222518920898 C 20.50000190734863 19.70406341552734 19.70406341552734 20.50000190734863 18.72222328186035 20.50000190734863 L 6.277778148651123 20.50000190734863 C 5.295937538146973 20.50000190734863 4.5 19.70406341552734 4.5 18.72222518920898 L 4.5 6.277777194976807 C 4.5 5.295937538146973 5.295938491821289 4.499999523162842 6.277778148651123 4.5 Z">
+                    <input type="checkbox" data-val="true" data-val-required="The IsChecked field is required." name="WeightChecked" value="true">
+                    <input name="WeightChecked" type="hidden" value="false">
+                </path>
+            </div>
+            <div id="Size">
+                <span>Size</span>
+            </div>
+        </div>
+
+        @* Input Size *@
+        <div class="Rectangle_311_bpf">
+            <rect id="Rectangle_311_bpf" rx="6" ry="6" x="0" y="0" width="284" height="36">
+                @*@Html.DropDownListFor(model => model.Size, (SelectList)ViewBag.Size, "S", new { @class = "form-control" })*@
+                <select name="Size" class="form-control" style="width: 310px">
+                    <option value="M">M</option>
+                    <option value="S">S</option>
+                    <option value="L">L</option>
+                </select>
+            </rect>
+        </div>
+
+        <div id="Ch_hin_th_khi_tick_vo_">
+            <span>Chỉ hiện thị khi tick vào ô</span>
+        </div>
+        <div id="description">
+            <span>Description</span>
+        </div>
+
+        @* Input Description *@
+        <div id="Group_522">
+            <div id="Group_499">
+                <div id="Group_500">
+                    <div class="Rectangle_347">
+                        <rect id="Rectangle_347" rx="6" ry="6" x="0" y="0" width="767" height="75">
+                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @cols = "105", @rows = "3", @style = "height: 74px" })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </rect>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div onclick="application.goToTargetView(event)" id="Group_501">
+            <svg class="Path_52" viewBox="0 0 162 39">
+                <path id="Path_52" d="M 7 0 L 155 0 C 158.8659973144531 0 162 3.134006500244141 162 7 L 162 32 C 162 35.86599349975586 158.8659973144531 39 155 39 L 7 39 C 3.134006500244141 39 0 35.86599349975586 0 32 L 0 7 C 0 3.134006500244141 3.134006500244141 0 7 0 Z">
+                </path>
+            </svg>
+            <div id="SCAN_QRBARCODE">
+                <span>SCAN QR/BARCODE</span>
+            </div>
+        </div>
+        <div id="Group_523_bpu">
+            <div id="Automated_Barcode">
+                <span>Automated Barcode</span>
+            </div>
+            <div class="Icon_material-radio-button-che_bpw" viewBox="3 3 20 20">
+                <path id="Icon_material-radio-button-che_bpw" d="M 13 8 C 10.24000072479248 8 8 10.23999977111816 8 13 C 8 15.76000022888184 10.23999977111816 18 13 18 C 15.76000022888184 18 18 15.76000022888184 18 13 C 18 10.24000072479248 15.76000022888184 8 13 8 Z M 13 3 C 7.480000495910645 3 3 7.480000495910645 3 13 C 3 18.52000045776367 7.479999542236328 23 13 23 C 18.52000045776367 23 23 18.52000045776367 23 13 C 23 7.479999542236328 18.52000045776367 3 13 3 Z M 13 21 C 8.579999923706055 21 5 17.42000198364258 5 13 C 5 8.579999923706055 8.579999923706055 5 13 5 C 17.42000198364258 5 21 8.579999923706055 21 13 C 21 17.42000198364258 17.42000198364258 21 13 21 Z">
+                    <input type="radio" name="radio" id="r1" value="AutoBarCode" style="width: 20px; height: 20px">
+                </path>
+            </div>
+        </div>
+        <div id="Group_526">
+            <div class="Icon_material-radio-button-unc_bpy" viewBox="3 3 20 20">
+                <path id="Icon_material-radio-button-unc_bpy" d="M 13 3 C 7.480000495910645 3 3 7.480000495910645 3 13 C 3 18.52000045776367 7.479999542236328 23 13 23 C 18.52000045776367 23 23 18.52000045776367 23 13 C 23 7.479999542236328 18.52000045776367 3 13 3 Z M 13 21 C 8.579999923706055 21 5 17.42000198364258 5 13 C 5 8.579999923706055 8.579999923706055 5 13 5 C 17.42000198364258 5 21 8.579999923706055 21 13 C 21 17.42000198364258 17.42000198364258 21 13 21 Z">
+                    <input type="radio" name="radio" id="r2" value="linkBarcode" style="width: 20px; height: 20px">
+                </path>
+            </div>
+            <div id="Link_QRBarcode">
+                <span>Link QR/Barcode</span>
+            </div>
+        </div>
+        @* Input Link Barcode *@
+        <div id="Group_503">
+            <div class="Rectangle_310_bp">
+                <rect id="Rectangle_310_bp" rx="0" ry="0" x="0" y="0" width="767" height="30">
+                    @Html.EditorFor(model => model.linkBarcode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.linkBarcode, "", new { @class = "text-danger" })
+                </rect>
+            </div>
+        </div>
+        <div id="Ch_hin_th_trng_khi_tick_vo_">
+            <span>Chỉ hiển thị trường khi tick vào ô</span>
+        </div>
+        <svg class="Line_129" viewBox="0 0 120 1">
+            <path id="Line_129" d="M 0 0 L 120 1">
+            </path>
+        </svg>
+        <svg class="Line_130" viewBox="0 0 156 72">
+            <path id="Line_130" d="M 0 72 L 156 0">
+            </path>
+        </svg>
+        <div id="Group_527_bp">
+            <div class="Icon_material-radio-button-unc_bp" viewBox="3 3 20 20">
+                <path id="Icon_material-radio-button-unc_bp" d="M 13 3 C 7.480000495910645 3 3 7.480000495910645 3 13 C 3 18.52000045776367 7.479999542236328 23 13 23 C 18.52000045776367 23 23 18.52000045776367 23 13 C 23 7.479999542236328 18.52000045776367 3 13 3 Z M 13 21 C 8.579999923706055 21 5 17.42000198364258 5 13 C 5 8.579999923706055 8.579999923706055 5 13 5 C 17.42000198364258 5 21 8.579999923706055 21 13 C 21 17.42000198364258 17.42000198364258 21 13 21 Z">
+                    <input type="radio" name="radio" id="r3" value="Scan" style="width: 20px; height: 20px">
+                </path>
+            </div>
+            <div id="Scan">
+                <span>Scan</span>
+            </div>
+        </div>
+        <svg class="Line_131" viewBox="0 0 210 143">
+            <path id="Line_131" d="M 0 143 L 210 0">
+            </path>
+        </svg>
+        <div id="unit">
+            <span>Unit</span>
+        </div>
+        <div id="Group_517">
+            <div class="Rectangle_310_bqf">
+                <rect id="Rectangle_310_bqf" rx="6" ry="6" x="0" y="0" width="767" height="36">
+                    @Html.EditorFor(model => model.Unit, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                </rect>
+            </div>
+        </div>
+        <div id="n_v_tnh_ca_sn_phm">
+            <span>Đơn vị tính của sản phẩm</span>
+        </div>
+        <div id="Group_352">
+            <div class="Rectangle_285_bqj">
+                <rect id="Rectangle_285_bqj" rx="3" ry="3" x="0" y="0" width="58" height="33">
+                    <button type="submit" class="btn btn-success btn-sm">
+                        <i class="fas fa-save"></i> <b>Save</b>
+                    </button>
+                </rect>
+            </div>
+
+            <div class="Rectangle_285_bqn">
+                <rect id="Rectangle_285_bqn" rx="3" ry="3" x="0" y="0" width="77" height="33">
+                    <a class="btn btn-sm btn-info" href="@Url.Action("Index","Product")">
+                        <i class="fas fa-backward"></i> <b>Back to List</b>
+                    </a>
+                </rect>
+            </div>
+        </div>
+        <div id="Group_528_bqp">
+            <div id="Group_351_bqq">
+                <div class="Rectangle_319_bqr">
+                    <rect id="Rectangle_319_bqr" rx="6" ry="6" x="0" y="0" width="726" height="36">
+                        @Html.EditorFor(model => model.oldStock, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.oldStock, "", new { @class = "text-danger" })
+                    </rect>
+                </div>
+            </div>
+        </div>
+        <div id="Cans_bqv">
+            <span>Cans</span>
+        </div>
+        <div id="Mc_bo_ng_s_lng_hng_tn_kho_thp">
+            <span>Mức báo động số lượng hàng tồn kho thấp</span>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        //View Image when webpage is loaded
+        var url = $('.ImagePath').val();
+        ViewImage(url);
+        //Now handle change Event of Input type file
+        $('#pickupImage').change(function () {
+            //call upload method
+            uploadImage(this.files[0]);
+        });
+        //First, create a method to upload image to server after picked from PC
+        function uploadImage(file) {
+            var formData = new FormData();
+            formData.append("file", file);
+            $.ajax({
+                data: formData,
+                type: "POST",
+                url: '/Product/SaveFile',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returnImageURL) {
+                    //Asign return Image URL to HTML.Hiddenfor
+                    $('#ImagePath').val(returnImageURL);
+                    //Call this method to view Image
+                    ViewImage(returnImageURL);
+                }
+            });
+        }
+        //View Image
+        function ViewImage(url) {
+            if (url) {
+                $('#n_324').attr('src', url);
+                $('#n_324_bo').attr('src', url);
+            }
+        }
+    </script>
+}

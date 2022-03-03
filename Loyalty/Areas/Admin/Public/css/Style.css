@@ -34,7 +34,7 @@ li {
 
 .others {
     padding-left: 300px;
-    flex: 1;
+    /*flex: 1;*/
     display: flex;
 }
 

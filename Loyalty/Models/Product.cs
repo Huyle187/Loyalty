@@ -37,6 +37,8 @@ namespace Loyalty.Models
         public string SKU { get; set; }
         public string imageBarcode { get; set; }
         public string linkBarcode { get; set; }
+        public string image { get; set; }
+        public string weight { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Campaign> Campaigns { get; set; }
