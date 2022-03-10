@@ -15,9 +15,28 @@ namespace Loyalty.Areas.Admin.Controllers
         private userDAO _userDAO = new userDAO();
 
         // GET: Admin/Product
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(int? size, int? page)
         {
-            return View(db.Products.ToList());
+            //Tạo giá trị số lượng sản phẩm muốn hiển thị lên trang
+            List<SelectListItem> items = new List<SelectListItem>();
+            items.Add(new SelectListItem { Text = "1", Value = "1" });
+            items.Add(new SelectListItem { Text = "2", Value = "2" });
+            items.Add(new SelectListItem { Text = "3", Value = "3" });
+            items.Add(new SelectListItem { Text = "4", Value = "4" });
+            items.Add(new SelectListItem { Text = "5", Value = "5" });
+            items.Add(new SelectListItem { Text = "6", Value = "6" });
+            // 1.1. Giữ trạng thái kích thước trang được chọn trên DropDownList
+            foreach (var item in items)
+            {
+                if (item.Value == size.ToString()) item.Selected = true;
+            }
+
+            // 1.2. Tạo các biến ViewBag
+            ViewBag.size = items; // ViewBag DropDownList
+            ViewBag.currentSize = size; // tạo biến kích thước trang hiện tại
+
+            return View(_userDAO.getList(size, page));
         }
 
         //Add new Product
@@ -51,6 +70,18 @@ namespace Loyalty.Areas.Admin.Controllers
         //Update Product
 
         //Delete Product
+        public ActionResult Delete(int id)
+        {
+            var _product = db.Products.Find(id);
+            if (_product.Equals(null))
+            {
+                return RedirectToAction("Index");
+            }
+
+            db.Products.Remove(_product);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         //Save and upload Image to Website
         [HttpPost]

@@ -2,7 +2,9 @@
     ViewBag.Title = "Product";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-@model List<Loyalty.Models.Product>
+@using PagedList.Mvc;
+@using PagedList;
+@model PagedList.PagedList<Loyalty.Models.Product>
 
 <link href="~/Areas/Admin/Public/css/Product/productStyle.css" rel="stylesheet" />
 
@@ -38,38 +40,40 @@
 
     <br />
     <br />
-
-    <div class="col-md-6 ">
-        <select style="height: 33px;">
-            <option value="p">PepsiCan</option>
-            <option value="c">CocaCan</option>
-            <option value="s">StingCan</option>
-        </select>
-        <select style="height: 33px;">
-            <option value="r">Reward Gift</option>
-        </select>
-        <a class="btn btn-sm btn-primary" href="@Url.Action("SearchProduct", "Product")" style="stroke: grey; fill: white">
-            <i class="fas fa-search"></i> search
-        </a>
+    <div class="row">
+        <div class="col-md-4">
+            <select style="height: 33px;">
+                <option value="p">PepsiCan</option>
+                <option value="c">CocaCan</option>
+                <option value="s">StingCan</option>
+            </select>
+            <select style="height: 33px;">
+                <option value="r">Reward Gift</option>
+            </select>
+            <a class="btn btn-sm btn-primary" href="@Url.Action("SearchProduct", "Product")" style="stroke: grey; fill: white">
+                <i class="fas fa-search"></i> Filter
+            </a>
+        </div>
+        <div class="col-md-8">
+            <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-100 navbar-search"
+                  action="@Url.Action("Search", "Product")" method="get">
+                <div class="input-group">
+                    <div class="input-group mb-4 border rounded-pill p-1" style="background-color:white; width:700px">
+                        <div class="input-group-prepend border-0">
+                            <button id="button-addon4" type="submit" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+                        </div>
+                        <input type="search" name="searchProductText" placeholder="What're you searching for?" aria-describedby="button-addon4" class="form-control bg-none border-0">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
     <br />
 
     <div class="card-header">
         <div class="row">
-
             <div class="col-md-12 text-right">
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
-                      action="@Url.Action("Search","Product")" method="get">
-                    <div class="input-group">
-                        <div class="input-group mb-4 border rounded-pill p-1" style="background-color:white; width:500px">
-                            <div class="input-group-prepend border-0">
-                                <button id="button-addon4" type="submit" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
-                            </div>
-                            <input type="search" name="searchProductText" placeholder="What're you searching for?" aria-describedby="button-addon4" class="form-control bg-none border-0">
-                        </div>
-                    </div>
-                </form>
                 <a class="btn btn-sm btn-success" href="@Url.Action("Create", "Product")">
                     <i class="fas fa-plus"></i> New Product
                 </a>
@@ -137,7 +141,7 @@
                                                         </a>
                                                     </td>
                                                     <td>
-                                                        <a class="btn btn-sm btn-danger" href="@Url.Action("Deltrash", "Product", new { id = item.productID })">
+                                                        <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Product", new { id = item.productID })">
                                                             <i class="fas fa-trash"></i>
                                                         </a>
                                                     </td>
@@ -156,4 +160,37 @@
             </div>
         </div>
     </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-6">
+                @using (Html.BeginForm("Index", "Product", FormMethod.Get, new { @enctype = "multipart/form-data" }))
+                {
+                    <span>Show</span>
+                    @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
+                    <span>of @Model.Count()</span>
+                }
+            </div>
+            <div class="col-md-6 pagination">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, size = ViewBag.currentSize }))
+            </div>
+        </div>
+    </div>
 </div>
+<style>
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 3px 10px;
+        text-decoration: none;
+    }
+    /*set the style for the active class*/
+    .pagination .active {
+        background-color: #0056b3;
+        color: black;
+    }
+
+    /*add background color when user hovers on inactive class*/
+    .pagination a:hover:not(.active) {
+        background-color: #808080;
+    }
+</style>
