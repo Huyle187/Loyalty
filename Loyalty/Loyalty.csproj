@@ -135,9 +135,13 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AuthController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CampaignController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InventoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
-    <Compile Include="Areas\Admin\DAO\userDAO.cs" />
+    <Compile Include="Areas\Admin\DAO\campaignDAO.cs" />
+    <Compile Include="Areas\Admin\DAO\inventoryDAO.cs" />
+    <Compile Include="Areas\Admin\DAO\productDAO.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +185,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Public\css\Campagin\campaginStyle.css" />
+    <Content Include="Areas\Admin\Public\css\Campagin\createStyle.css" />
     <Content Include="Areas\Admin\Public\css\daterangepicker.css" />
     <Content Include="Areas\Admin\Public\css\Product\AddNewStyle.css" />
     <Content Include="Areas\Admin\Public\css\Product\productStyle.css" />
@@ -255,6 +261,12 @@
     <Content Include="Models\LoyaltyModel.edmx.diagram">
       <DependentUpon>LoyaltyModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\Inventory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Inventory\Store.cshtml" />
+    <Content Include="Areas\Admin\Views\Campaign\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Campaign\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Inventory\Update.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

@@ -1,0 +1,3779 @@
+﻿.mediaViewInfo {
+    --web-view-name: 4.2 Add_Promotion;
+    --web-view-id: n_2_Add_Promotion;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+:root {
+    --web-view-ids: n_2_Add_Promotion;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#n_2_Add_Promotion {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(239,242,249,1);
+    overflow: hidden;
+    --web-view-name: 4.2 Add_Promotion;
+    --web-view-id: n_2_Add_Promotion;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#Rectangle_355 {
+    fill: transparent;
+    stroke: rgba(255,0,0,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_355 {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 454px;
+    height: 389px;
+    left: 1409px;
+    top: 578px;
+}
+
+#Group_373_f {
+    position: absolute;
+    width: 304px;
+    height: 27px;
+    left: 300px;
+    top: 127px;
+    overflow: visible;
+}
+
+#Promotion_g {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 94px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(0,89,149,1);
+}
+
+#n___Add_new_Campaign {
+    left: 123px;
+    top: 3px;
+    position: absolute;
+    overflow: visible;
+    width: 182px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(119,133,149,1);
+}
+
+#Left_navigation_bar_i {
+    position: absolute;
+    width: 241px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Group_487_j {
+    position: absolute;
+    width: 241px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_297_k {
+    fill: rgba(0,55,104,1);
+}
+
+.Rectangle_297_k {
+    position: absolute;
+    overflow: visible;
+    width: 241px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_feather-image_m {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 14px;
+    top: 202px;
+    overflow: visible;
+}
+
+#Path_13_n {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_13_n {
+    overflow: visible;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_14_o {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_14_o {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4.133px;
+    top: 5.133px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_15_p {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_15_p {
+    overflow: visible;
+    position: absolute;
+    width: 18.73px;
+    height: 14.915px;
+    left: 3px;
+    top: 7.486px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Dashboard__p {
+    left: 49px;
+    top: 202px;
+    position: absolute;
+    overflow: visible;
+    width: 79px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Product_q {
+    left: 49px;
+    top: 257px;
+    position: absolute;
+    overflow: visible;
+    width: 54px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 2_1_All_Product.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#All_product_s {
+    left: 49px;
+    top: 302px;
+    position: absolute;
+    overflow: visible;
+    width: 76px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 2_1_All_Product.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Inventory_s {
+    left: 49px;
+    top: 347px;
+    position: absolute;
+    overflow: visible;
+    width: 65px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 2_3__Product_Inventory.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Promotion_t {
+    left: 49px;
+    top: 402px;
+    position: absolute;
+    overflow: visible;
+    width: 72px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 4_1_Promotion_List.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Store_u {
+    left: 49px;
+    top: 533px;
+    position: absolute;
+    overflow: visible;
+    width: 36px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 6_1_Store_List.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Icon_feather-chevron-down_w {
+    fill: transparent;
+    stroke: rgba(134,164,209,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-chevron-down_w {
+    overflow: visible;
+    position: absolute;
+    width: 14.588px;
+    height: 7.773px;
+    left: 210px;
+    top: 264px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Collection_w {
+    left: 49px;
+    top: 488px;
+    position: absolute;
+    overflow: visible;
+    width: 68px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 5_1_Collection.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Customer_x {
+    left: 49px;
+    top: 588px;
+    position: absolute;
+    overflow: visible;
+    width: 66px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: home.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(187,209,241,1);
+    letter-spacing: 0.1px;
+}
+
+#Icon_feather-image_y {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 14px;
+    top: 257px;
+    overflow: visible;
+}
+
+#Path_13_ {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_13_ {
+    overflow: visible;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_14_ {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_14_ {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4.133px;
+    top: 5.133px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_15_ {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_15_ {
+    overflow: visible;
+    position: absolute;
+    width: 18.73px;
+    height: 14.915px;
+    left: 3px;
+    top: 7.486px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Icon_feather-image_a {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 14px;
+    top: 402px;
+    overflow: visible;
+}
+
+#Path_13_a {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_13_a {
+    overflow: visible;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_14_a {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_14_a {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4.133px;
+    top: 5.133px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_15_a {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_15_a {
+    overflow: visible;
+    position: absolute;
+    width: 18.73px;
+    height: 14.915px;
+    left: 3px;
+    top: 7.486px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Icon_feather-image_b {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 14px;
+    top: 588px;
+    overflow: visible;
+}
+
+#Path_13_b {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_13_b {
+    overflow: visible;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_14_b {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_14_b {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4.133px;
+    top: 5.133px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_15_b {
+    fill: transparent;
+    stroke: rgba(187,209,241,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_15_b {
+    overflow: visible;
+    position: absolute;
+    width: 18.73px;
+    height: 14.915px;
+    left: 3px;
+    top: 7.486px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#All_Campaign_a {
+    left: 49px;
+    top: 443px;
+    position: absolute;
+    overflow: visible;
+    width: 91px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 4_1_Promotion_List.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.1px;
+}
+
+#Icon_feather-chevron-down_b {
+    fill: transparent;
+    stroke: rgba(134,164,209,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-chevron-down_b {
+    overflow: visible;
+    position: absolute;
+    width: 14.588px;
+    height: 7.773px;
+    left: 210px;
+    top: 409px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Loyalty__Program_c {
+    left: 48px;
+    top: 29px;
+    position: absolute;
+    overflow: visible;
+    width: 137px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: UVF Pistilli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    color: rgba(239,242,249,1);
+}
+
+#Header_d {
+    position: absolute;
+    width: 1452px;
+    height: 40px;
+    left: 300px;
+    top: 37px;
+    overflow: visible;
+}
+
+#Group_325_e {
+    position: absolute;
+    width: 181px;
+    height: 40px;
+    left: 1271px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Icon_awesome-user-circle_g {
+    fill: url(#Icon_awesome-user-circle_g);
+}
+
+.Icon_awesome-user-circle_g {
+    overflow: visible;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#LOGGED_IN_USER_h {
+    left: 60px;
+    top: 10px;
+    position: absolute;
+    overflow: visible;
+    width: 122px;
+    white-space: nowrap;
+    line-height: 20px;
+    margin-top: -2.5px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_awesome-bars_i {
+    fill: rgba(0,55,104,1);
+}
+
+.Icon_awesome-bars_i {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    left: 0px;
+    top: 10.719px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_495_j {
+    position: absolute;
+    width: 241px;
+    height: 45px;
+    left: -1px;
+    top: 389px;
+    overflow: visible;
+}
+
+#Rectangle_298_k {
+    opacity: 0.5;
+    fill: rgba(255,255,255,0.502);
+}
+
+.Rectangle_298_k {
+    position: absolute;
+    overflow: visible;
+    width: 241px;
+    height: 45px;
+    left: 0px;
+    top: 0px;
+}
+
+#Rectangle_299_l {
+    fill: rgba(255,255,255,1);
+}
+
+.Rectangle_299_l {
+    position: absolute;
+    overflow: visible;
+    width: 4px;
+    height: 45px;
+    left: 0px;
+    top: 0px;
+}
+
+#Rectangle_337_m {
+    fill: rgba(255,255,255,1);
+}
+
+.Rectangle_337_m {
+    filter: drop-shadow(0px 0px 18px rgba(134, 164, 209, 0.659));
+    position: absolute;
+    overflow: visible;
+    width: 1117px;
+    height: 832px;
+    left: 300px;
+    top: 189px;
+}
+
+#New_Campaign {
+    left: 340px;
+    top: 210px;
+    position: absolute;
+    overflow: visible;
+    width: 118px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(0,55,104,1);
+    letter-spacing: 0.1px;
+}
+
+#Group_413 {
+    position: absolute;
+    width: 983px;
+    height: 36px;
+    left: 340px;
+    top: 297px;
+    overflow: visible;
+}
+
+#Rectangle_334_p {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_334_p {
+    position: absolute;
+    overflow: visible;
+    width: 983px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Pepsi_Black_O2O_q {
+    left: 15px;
+    top: 7px;
+    position: absolute;
+    overflow: visible;
+    width: 109px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Line_123_r {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_123_r {
+    overflow: visible;
+    position: absolute;
+    width: 983px;
+    height: 0.5px;
+    left: 340px;
+    top: 247px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Campaign_Name {
+    left: 340px;
+    top: 272px;
+    position: absolute;
+    overflow: visible;
+    width: 112px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Point_per_item {
+    left: 1017px;
+    top: 567px;
+    position: absolute;
+    overflow: visible;
+    width: 96px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Store_v {
+    left: 340px;
+    top: 704px;
+    position: absolute;
+    overflow: visible;
+    width: 35px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#n__v {
+    left: 430px;
+    top: 724px;
+    position: absolute;
+    overflow: visible;
+    width: 12px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#n__w {
+    left: 430px;
+    top: 754px;
+    position: absolute;
+    overflow: visible;
+    width: 12px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Line_132 {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_132 {
+    overflow: visible;
+    position: absolute;
+    width: 983px;
+    height: 0.5px;
+    left: 340px;
+    top: 689px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Remove_y {
+    display: none;
+    left: 1337px;
+    top: 454px;
+    position: absolute;
+    overflow: visible;
+    width: 54px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Circle_K_-_Au_Co_z {
+    left: 456px;
+    top: 724px;
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-close-circle-ou_ {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1309px;
+    top: 727px;
+    overflow: visible;
+}
+
+#Path_46_ {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_46_ {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4px;
+    top: 4.571px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_47_ {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_47_ {
+    overflow: visible;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#n_633_Au_Co_Ward_9_Tan_Binh_di {
+    left: 645px;
+    top: 724px;
+    position: absolute;
+    overflow: visible;
+    width: 300px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Edit_this_store {
+    left: 1197px;
+    top: 724px;
+    position: absolute;
+    overflow: visible;
+    width: 88px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 6_2_Add_Store.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Circle_K_-_Au_Co_ {
+    left: 456px;
+    top: 754px;
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-close-circle-ou_a {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1309px;
+    top: 760px;
+    overflow: visible;
+}
+
+#Path_46_a {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_46_a {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4px;
+    top: 4.571px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_47_a {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_47_a {
+    overflow: visible;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#n_633_Au_Co_Ward_9_Tan_Binh_di_ {
+    left: 645px;
+    top: 754px;
+    position: absolute;
+    overflow: visible;
+    width: 300px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Edit_this_store_a {
+    left: 1197px;
+    top: 754px;
+    position: absolute;
+    overflow: visible;
+    width: 88px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 6_2_Add_Store.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#n__b {
+    left: 430px;
+    top: 567px;
+    position: absolute;
+    overflow: visible;
+    width: 12px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Line_133 {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_133 {
+    overflow: visible;
+    position: absolute;
+    width: 983px;
+    height: 0.5px;
+    left: 340px;
+    top: 839px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Pepsi_Can_d {
+    left: 456px;
+    top: 567px;
+    position: absolute;
+    overflow: visible;
+    width: 65px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-close-circle-ou_e {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1309px;
+    top: 570px;
+    overflow: visible;
+}
+
+#Path_46_f {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_46_f {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4px;
+    top: 4.571px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_47_g {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_47_g {
+    overflow: visible;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Edit_product {
+    left: 1206px;
+    top: 567px;
+    position: absolute;
+    overflow: visible;
+    width: 79px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 2_2_Add_Product_Fill.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Group_515 {
+    position: absolute;
+    width: 121px;
+    height: 30px;
+    left: 645px;
+    top: 562px;
+    overflow: visible;
+}
+
+#Group_351 {
+    position: absolute;
+    width: 121px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_319 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_319 {
+    position: absolute;
+    overflow: visible;
+    width: 121px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+#Enter_quantity {
+    left: 8px;
+    top: 5px;
+    position: absolute;
+    overflow: visible;
+    width: 87px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(123,123,123,1);
+}
+
+#Icon_awesome-caret-up {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    left: 102.812px;
+    top: 7.813px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Icon_awesome-caret-up_n {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_n {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    transform: translate(-0.489px, 0px) matrix(1,0,0,1,103.3012,17.0001) rotate(180deg);
+    transform-origin: center;
+    left: 0px;
+    top: 0px;
+}
+
+#Group_516 {
+    position: absolute;
+    width: 133.151px;
+    height: 30px;
+    left: 875.849px;
+    top: 562px;
+    overflow: visible;
+}
+
+#Group_351_p {
+    position: absolute;
+    width: 133.151px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Path_48 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_48 {
+    overflow: visible;
+    position: absolute;
+    width: 133.151px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Enter_redemption {
+    left: 6.216px;
+    top: 4px;
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(123,123,123,1);
+}
+
+#Icon_awesome-caret-up_s {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_s {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    left: 115.307px;
+    top: 7.813px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Icon_awesome-caret-up_t {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_t {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    transform: translate(0px, 0px) matrix(1,0,0,1,115.3071,17.0001) rotate(180deg);
+    transform-origin: center;
+    left: 0px;
+    top: 0px;
+}
+
+#Cans {
+    left: 773px;
+    top: 567px;
+    position: absolute;
+    overflow: visible;
+    width: 33px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#n_v_tnh_t_ng_cp_nht_theo_sn_ph {
+    display: none;
+    left: 773px;
+    top: 627px;
+    position: absolute;
+    overflow: visible;
+    width: 161px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Group_404_w {
+    position: absolute;
+    width: 983px;
+    height: 36px;
+    left: 340px;
+    top: 373px;
+    overflow: visible;
+}
+
+#Rectangle_311_x {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_311_x {
+    position: absolute;
+    overflow: visible;
+    width: 983px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_feather-chevron-down_z {
+    fill: transparent;
+    stroke: rgba(123,123,123,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-chevron-down_z {
+    overflow: visible;
+    position: absolute;
+    width: 14.2px;
+    height: 6.905px;
+    left: 949.321px;
+    top: 18px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Reward_redemption_z {
+    left: 10px;
+    top: 7px;
+    position: absolute;
+    overflow: visible;
+    width: 131px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Type_ {
+    left: 340px;
+    top: 348px;
+    position: absolute;
+    overflow: visible;
+    width: 32px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Group_520 {
+    position: absolute;
+    width: 372px;
+    height: 261px;
+    left: 1380px;
+    top: 189px;
+    overflow: visible;
+}
+
+#Group_519 {
+    position: absolute;
+    width: 372px;
+    height: 261px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_338 {
+    fill: rgba(255,255,255,1);
+}
+
+.Rectangle_338 {
+    filter: drop-shadow(0px 0px 18px rgba(134, 164, 209, 0.659));
+    position: absolute;
+    overflow: visible;
+    width: 426px;
+    height: 315px;
+    left: 0px;
+    top: 0px;
+}
+
+#Line_122 {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_122 {
+    overflow: visible;
+    position: absolute;
+    width: 343px;
+    height: 0.5px;
+    left: 15px;
+    top: 56px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Period {
+    left: 17px;
+    top: 11px;
+    position: absolute;
+    overflow: visible;
+    width: 50px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(0,55,104,1);
+    letter-spacing: 0.1px;
+}
+
+#Start_day {
+    left: 17px;
+    top: 63px;
+    position: absolute;
+    overflow: visible;
+    width: 59px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Group_427 {
+    position: absolute;
+    width: 105px;
+    height: 36px;
+    left: 156px;
+    top: 93px;
+    overflow: visible;
+}
+
+#Group_424 {
+    position: absolute;
+    width: 105px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_334_ {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_334_ {
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#n_00000 {
+    left: 39px;
+    top: 8px;
+    position: absolute;
+    overflow: visible;
+    width: 56px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Icon_material-timer {
+    fill: rgba(206,206,206,1);
+}
+
+.Icon_material-timer {
+    overflow: visible;
+    position: absolute;
+    width: 17.446px;
+    height: 19.593px;
+    left: 9.37px;
+    top: 7.907px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_428 {
+    position: absolute;
+    width: 135px;
+    height: 36px;
+    left: 17px;
+    top: 93px;
+    overflow: visible;
+}
+
+#Group_423_d {
+    position: absolute;
+    width: 135px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_334_e {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_334_e {
+    position: absolute;
+    overflow: visible;
+    width: 135px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#n_9092020 {
+    left: 37px;
+    top: 7px;
+    position: absolute;
+    overflow: visible;
+    width: 77px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Icon_feather-calendar_g {
+    position: absolute;
+    width: 17.289px;
+    height: 19.777px;
+    left: 12.92px;
+    top: 7.223px;
+    overflow: visible;
+}
+
+#Path_31_h {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_31_h {
+    overflow: visible;
+    position: absolute;
+    width: 19.289px;
+    height: 18.777px;
+    left: 0px;
+    top: 3px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_32_i {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_32_i {
+    overflow: visible;
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: 12.486px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_33_j {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_33_j {
+    overflow: visible;
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: 4.802px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_34_k {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_34_k {
+    overflow: visible;
+    position: absolute;
+    width: 19.289px;
+    height: 2px;
+    left: 0px;
+    top: 7.911px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_426 {
+    position: absolute;
+    width: 93px;
+    height: 36px;
+    left: 265px;
+    top: 93px;
+    overflow: visible;
+}
+
+#Rectangle_311_m {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_311_m {
+    position: absolute;
+    overflow: visible;
+    width: 93px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_feather-chevron-down_n {
+    fill: transparent;
+    stroke: rgba(123,123,123,1);
+    stroke-width: 1.5px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-chevron-down_n {
+    overflow: visible;
+    position: absolute;
+    width: 10.887px;
+    height: 5.587px;
+    left: 74.996px;
+    top: 18px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#GMT7 {
+    left: 10px;
+    top: 8px;
+    position: absolute;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#End_day {
+    left: 17px;
+    top: 149px;
+    position: absolute;
+    overflow: visible;
+    width: 54px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Group_441 {
+    position: absolute;
+    width: 105px;
+    height: 36px;
+    left: 156px;
+    top: 179px;
+    overflow: visible;
+}
+
+#Group_424_r {
+    position: absolute;
+    width: 105px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_334_s {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_334_s {
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#n_00000_t {
+    left: 39px;
+    top: 8px;
+    position: absolute;
+    overflow: visible;
+    width: 56px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Icon_material-timer_u {
+    fill: rgba(206,206,206,1);
+}
+
+.Icon_material-timer_u {
+    overflow: visible;
+    position: absolute;
+    width: 17.446px;
+    height: 19.593px;
+    left: 9.37px;
+    top: 7.907px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_442 {
+    position: absolute;
+    width: 135px;
+    height: 36px;
+    left: 17px;
+    top: 179px;
+    overflow: visible;
+}
+
+#Group_423_w {
+    position: absolute;
+    width: 135px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_334_x {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_334_x {
+    position: absolute;
+    overflow: visible;
+    width: 135px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#n_9092020_y {
+    left: 37px;
+    top: 7px;
+    position: absolute;
+    overflow: visible;
+    width: 77px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Icon_feather-calendar_z {
+    position: absolute;
+    width: 17.289px;
+    height: 19.777px;
+    left: 13.104px;
+    top: 7.223px;
+    overflow: visible;
+}
+
+#Path_31_ {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_31_ {
+    overflow: visible;
+    position: absolute;
+    width: 19.289px;
+    height: 18.777px;
+    left: 0px;
+    top: 3px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_32_ {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_32_ {
+    overflow: visible;
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: 12.486px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_33_ {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_33_ {
+    overflow: visible;
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    left: 4.802px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_34_ {
+    fill: transparent;
+    stroke: rgba(206,206,206,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path_34_ {
+    overflow: visible;
+    position: absolute;
+    width: 19.289px;
+    height: 2px;
+    left: 0px;
+    top: 7.911px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_443 {
+    position: absolute;
+    width: 93px;
+    height: 36px;
+    left: 265px;
+    top: 179px;
+    overflow: visible;
+}
+
+#Rectangle_311_ {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_311_ {
+    position: absolute;
+    overflow: visible;
+    width: 93px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_feather-chevron-down_c {
+    fill: transparent;
+    stroke: rgba(123,123,123,1);
+    stroke-width: 1.5px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-chevron-down_c {
+    overflow: visible;
+    position: absolute;
+    width: 10.887px;
+    height: 5.587px;
+    left: 74.502px;
+    top: 18px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#GMT7_ {
+    left: 10px;
+    top: 8px;
+    position: absolute;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#T_ng_kch_hot_khi_n_thi_gian {
+    display: none;
+    left: 8px;
+    top: 242px;
+    position: absolute;
+    overflow: visible;
+    width: 237px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI Emoji;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Auto_active {
+    left: 43px;
+    top: 226px;
+    position: absolute;
+    overflow: visible;
+    width: 75px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_awesome-check-square_a {
+    fill: rgba(18,121,239,1);
+}
+
+.Icon_awesome-check-square_a {
+    overflow: visible;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 21px;
+    top: 226px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Click_Edit__m_1_tab_mi_iu_hng_ {
+    display: none;
+    left: 1075px;
+    top: 414px;
+    position: absolute;
+    overflow: visible;
+    width: 217px;
+    white-space: nowrap;
+    text-align: right;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Group_523 {
+    position: absolute;
+    width: 96.5px;
+    height: 20px;
+    left: 398.5px;
+    top: 454px;
+    overflow: visible;
+}
+
+#Collection_d {
+    left: 30.5px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 67px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_material-radio-button-che {
+    fill: rgba(0,89,149,1);
+}
+
+.Icon_material-radio-button-che {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Product_f {
+    left: 340px;
+    top: 424px;
+    position: absolute;
+    overflow: visible;
+    width: 53px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Pepsi_Black_-_Reward_Gifts {
+    left: 585px;
+    top: 454px;
+    position: absolute;
+    overflow: visible;
+    width: 171px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-close-circle-ou_h {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1309px;
+    top: 457px;
+    overflow: visible;
+}
+
+#Path_46_i {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_46_i {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4px;
+    top: 4.571px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_47_j {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_47_j {
+    overflow: visible;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Edit_Collection {
+    left: 1191px;
+    top: 454px;
+    position: absolute;
+    overflow: visible;
+    width: 94px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Group_527 {
+    position: absolute;
+    width: 113.5px;
+    height: 20px;
+    left: 398.5px;
+    top: 539px;
+    overflow: visible;
+}
+
+#Icon_material-radio-button-unc {
+    fill: rgba(0,0,0,1);
+}
+
+.Icon_material-radio-button-unc {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Add_Product {
+    left: 30.5px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 84px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,0,0,1);
+}
+
+#Point_per_item_o {
+    left: 1016px;
+    top: 607px;
+    position: absolute;
+    overflow: visible;
+    width: 96px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#n__p {
+    left: 430px;
+    top: 607px;
+    position: absolute;
+    overflow: visible;
+    width: 12px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Pepsi_Can_q {
+    left: 456px;
+    top: 607px;
+    position: absolute;
+    overflow: visible;
+    width: 65px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-close-circle-ou_r {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1309px;
+    top: 610px;
+    overflow: visible;
+}
+
+#Path_46_s {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_46_s {
+    overflow: visible;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 4px;
+    top: 4.571px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_47_t {
+    fill: rgba(123,123,123,1);
+}
+
+.Path_47_t {
+    overflow: visible;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Edit_product_u {
+    left: 1206px;
+    top: 607px;
+    position: absolute;
+    overflow: visible;
+    width: 79px;
+    white-space: nowrap;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 2_2_Add_Product_Fill.html;
+    cursor: pointer;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Group_528 {
+    position: absolute;
+    width: 121px;
+    height: 30px;
+    left: 645px;
+    top: 602px;
+    overflow: visible;
+}
+
+#Group_351_w {
+    position: absolute;
+    width: 121px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_319_x {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_319_x {
+    position: absolute;
+    overflow: visible;
+    width: 121px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+#n_23 {
+    left: 15px;
+    top: 5px;
+    position: absolute;
+    overflow: visible;
+    width: 25px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_awesome-caret-up_z {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_z {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    left: 102.812px;
+    top: 7.813px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Icon_awesome-caret-up_ {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_ {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    transform: translate(-0.489px, 0px) matrix(1,0,0,1,103.3012,17.0001) rotate(180deg);
+    transform-origin: center;
+    left: 0px;
+    top: 0px;
+}
+
+#Group_529 {
+    position: absolute;
+    width: 133px;
+    height: 30px;
+    left: 876px;
+    top: 602px;
+    overflow: visible;
+}
+
+#Group_351_ {
+    position: absolute;
+    width: 133px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_319_ {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_319_ {
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+#n_23_ {
+    left: 15px;
+    top: 5px;
+    position: absolute;
+    overflow: visible;
+    width: 25px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_awesome-caret-up_a {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_a {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    left: 115.342px;
+    top: 7.813px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Icon_awesome-caret-up_b {
+    fill: rgba(123,123,123,1);
+}
+
+.Icon_awesome-caret-up_b {
+    overflow: visible;
+    position: absolute;
+    width: 9.85px;
+    height: 5.117px;
+    transform: translate(-0.144px, 0px) matrix(1,0,0,1,115.4862,17.0001) rotate(180deg);
+    transform-origin: center;
+    left: 0px;
+    top: 0px;
+}
+
+#Cans_ {
+    left: 773px;
+    top: 607px;
+    position: absolute;
+    overflow: visible;
+    width: 33px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Tnggim {
+    display: none;
+    left: 745px;
+    top: 524px;
+    position: absolute;
+    overflow: visible;
+    width: 71px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Line_135 {
+    fill: transparent;
+    stroke: rgba(183,27,9,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_135 {
+    display: none;
+    overflow: visible;
+    position: absolute;
+    width: 12.919px;
+    height: 28.394px;
+    left: 747.618px;
+    top: 539.5px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#n_v_tnh_redemption_thay_i_theo {
+    display: none;
+    left: 986px;
+    top: 489px;
+    position: absolute;
+    overflow: visible;
+    width: 295px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI Emoji;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Ellipse_2 {
+    fill: transparent;
+    stroke: rgba(239,18,18,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Ellipse_2 {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 44px;
+    height: 36px;
+    left: 1012px;
+    top: 559px;
+}
+
+#Group_531 {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 585px;
+    top: 489px;
+    overflow: visible;
+}
+
+#Group_524_d {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_352_e {
+    fill: rgba(219,233,252,1);
+    stroke: rgba(77,126,200,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_352_e {
+    position: absolute;
+    overflow: visible;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+}
+
+#Add_Collection {
+    left: 33px;
+    top: 6px;
+    position: absolute;
+    overflow: visible;
+    width: 99px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-add-circle-outl_g {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 6.609px;
+    top: 6px;
+    overflow: visible;
+}
+
+#Path_49_h {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_49_h {
+    overflow: visible;
+    position: absolute;
+    width: 8.5px;
+    height: 8.5px;
+    left: 6.137px;
+    top: 6.137px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_50_i {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_50_i {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_532 {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 456px;
+    top: 642px;
+    overflow: visible;
+}
+
+#Group_524_k {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_352_l {
+    fill: rgba(219,233,252,1);
+    stroke: rgba(77,126,200,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_352_l {
+    position: absolute;
+    overflow: visible;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+}
+
+#Add_Product_m {
+    left: 33px;
+    top: 6px;
+    position: absolute;
+    overflow: visible;
+    width: 84px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-add-circle-outl_n {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 5.5px;
+    top: 6px;
+    overflow: visible;
+}
+
+#Path_49_o {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_49_o {
+    overflow: visible;
+    position: absolute;
+    width: 8.5px;
+    height: 8.5px;
+    left: 6.137px;
+    top: 6.137px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_50_p {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_50_p {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_533 {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 456px;
+    top: 789px;
+    overflow: visible;
+}
+
+#Group_524_r {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_352_s {
+    fill: rgba(219,233,252,1);
+    stroke: rgba(77,126,200,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_352_s {
+    position: absolute;
+    overflow: visible;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+}
+
+#Add_store {
+    left: 33px;
+    top: 6px;
+    position: absolute;
+    overflow: visible;
+    width: 66px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-add-circle-outl_u {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 5.5px;
+    top: 6px;
+    overflow: visible;
+}
+
+#Path_49_v {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_49_v {
+    overflow: visible;
+    position: absolute;
+    width: 8.5px;
+    height: 8.5px;
+    left: 6.137px;
+    top: 6.137px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_50_w {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_50_w {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_458 {
+    position: absolute;
+    width: 983px;
+    height: 36px;
+    left: 340px;
+    top: 884px;
+    overflow: visible;
+}
+
+#Rectangle_311_y {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_311_y {
+    position: absolute;
+    overflow: visible;
+    width: 983px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_feather-chevron-down_d {
+    fill: transparent;
+    stroke: rgba(123,123,123,1);
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-chevron-down_d {
+    overflow: visible;
+    position: absolute;
+    width: 14.2px;
+    height: 6.905px;
+    left: 948.942px;
+    top: 18px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Vietnam_a {
+    left: 10px;
+    top: 7px;
+    position: absolute;
+    overflow: visible;
+    width: 56px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112,112,112,1);
+}
+
+#Market {
+    left: 340px;
+    top: 859px;
+    position: absolute;
+    overflow: visible;
+    width: 48px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+}
+
+#Group_535 {
+    position: absolute;
+    width: 296.46px;
+    height: 301.076px;
+    left: 1428px;
+    top: 640.991px;
+    overflow: visible;
+}
+
+#Path_51 {
+    fill: rgba(255,255,255,1);
+}
+
+.Path_51 {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.161));
+    overflow: visible;
+    position: absolute;
+    width: 326.46px;
+    height: 331.076px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_536 {
+    position: absolute;
+    width: 277px;
+    height: 32px;
+    left: 1440px;
+    top: 663px;
+    overflow: visible;
+}
+
+#Group_534 {
+    position: absolute;
+    width: 277px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_6_ {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,0.89);
+    stroke-width: 0.5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_6_ {
+    position: absolute;
+    overflow: visible;
+    width: 277px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_awesome-search_ {
+    opacity: 0.5;
+    fill: rgba(143,143,143,1);
+}
+
+.Icon_awesome-search_ {
+    overflow: visible;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 12.743px;
+    top: 8.788px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Search_for_Store {
+    left: 43px;
+    top: 7px;
+    position: absolute;
+    overflow: visible;
+    width: 96px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(123,123,123,1);
+}
+
+#Group_538 {
+    position: absolute;
+    width: 5px;
+    height: 150px;
+    left: 1719px;
+    top: 705px;
+    overflow: visible;
+}
+
+#Rectangle_353 {
+    fill: rgba(239,242,249,1);
+    stroke: rgba(199,199,199,1);
+    stroke-width: 0.10000000149011612px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_353 {
+    position: absolute;
+    overflow: visible;
+    width: 5px;
+    height: 150px;
+    left: 0px;
+    top: 0px;
+}
+
+#Rectangle_354 {
+    fill: rgba(134,164,209,1);
+}
+
+.Rectangle_354 {
+    position: absolute;
+    overflow: visible;
+    width: 5px;
+    height: 66px;
+    left: 0px;
+    top: 0px;
+}
+
+#Group_543 {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 1449px;
+    top: 601px;
+    overflow: visible;
+}
+
+#Group_524_e {
+    position: absolute;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_352_f {
+    fill: rgba(219,233,252,1);
+    stroke: rgba(77,126,200,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_352_f {
+    position: absolute;
+    overflow: visible;
+    width: 136px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+}
+
+#Add_store_f {
+    left: 33px;
+    top: 6px;
+    position: absolute;
+    overflow: visible;
+    width: 66px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(0,89,149,1);
+}
+
+#Icon_ionic-ios-add-circle-outl_h {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 5.5px;
+    top: 6px;
+    overflow: visible;
+}
+
+#Path_49_i {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_49_i {
+    overflow: visible;
+    position: absolute;
+    width: 8.5px;
+    height: 8.5px;
+    left: 6.137px;
+    top: 6.137px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Path_50_j {
+    fill: rgba(56,103,172,1);
+}
+
+.Path_50_j {
+    overflow: visible;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Line_136 {
+    fill: transparent;
+    stroke: rgba(183,27,9,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-dasharray: 8;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_136 {
+    display: none;
+    overflow: visible;
+    position: absolute;
+    width: 824.009px;
+    height: 8px;
+    left: 585.5px;
+    top: 797.5px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_545 {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 1428px;
+    top: 780px;
+    overflow: visible;
+}
+
+#Group_539 {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Group_534_m {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_6_n {
+    fill: transparent;
+    stroke: rgba(0,0,0,1);
+    stroke-width: 0.10000000149011612px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_6_n {
+    position: absolute;
+    overflow: visible;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+
+#Circle_K_-_Au_Co_o {
+    left: 45px;
+    top: 16.909px;
+    position: absolute;
+    overflow: visible;
+    width: 98px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_feather-square_q {
+    fill: transparent;
+    stroke: rgba(0,0,0,1);
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-square_q {
+    overflow: visible;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 12px;
+    top: 18px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_544 {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 1428px;
+    top: 730px;
+    overflow: visible;
+}
+
+#Group_537 {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Group_534_s {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_6_t {
+    fill: rgba(236,237,239,1);
+}
+
+.Rectangle_6_t {
+    position: absolute;
+    overflow: visible;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+
+#Circle_K_-_Au_Co_u {
+    left: 46px;
+    top: 17.567px;
+    position: absolute;
+    overflow: visible;
+    width: 98px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_awesome-check-square_v {
+    fill: rgba(18,121,239,1);
+}
+
+.Icon_awesome-check-square_v {
+    overflow: visible;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 12px;
+    top: 19px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_546 {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 1428px;
+    top: 830px;
+    overflow: visible;
+}
+
+#Group_539_x {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Group_534_y {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_6_z {
+    fill: transparent;
+    stroke: rgba(0,0,0,1);
+    stroke-width: 0.10000000149011612px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_6_z {
+    position: absolute;
+    overflow: visible;
+    width: 291px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+
+#Circle_K_-_Au_Co_a {
+    left: 45px;
+    top: 16.909px;
+    position: absolute;
+    overflow: visible;
+    width: 98px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_feather-square_ {
+    fill: transparent;
+    stroke: rgba(0,0,0,1);
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-square_ {
+    overflow: visible;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 12px;
+    top: 18px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#All {
+    left: 1473px;
+    top: 705px;
+    position: absolute;
+    overflow: visible;
+    width: 17px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(0,0,0,1);
+}
+
+#Icon_feather-square_a {
+    fill: transparent;
+    stroke: rgba(0,0,0,1);
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Icon_feather-square_a {
+    overflow: visible;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 1440px;
+    top: 706.091px;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Group_421 {
+    position: absolute;
+    width: 65px;
+    height: 30px;
+    left: 1566px;
+    top: 899px;
+    overflow: visible;
+}
+
+#Rectangle_300_ {
+    fill: rgba(227,233,237,1);
+}
+
+.Rectangle_300_ {
+    position: absolute;
+    overflow: visible;
+    width: 65px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+#Cancel_ {
+    left: 9.828px;
+    top: 4.706px;
+    position: absolute;
+    overflow: visible;
+    width: 46px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+    letter-spacing: 0.1px;
+}
+
+#Group_422 {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    left: 1651px;
+    top: 899px;
+    overflow: visible;
+}
+
+#Rectangle_300_a {
+    fill: rgba(0,89,149,1);
+}
+
+.Rectangle_300_a {
+    position: absolute;
+    overflow: visible;
+    width: 60px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+#Save_ {
+    left: 14.697px;
+    top: 4.706px;
+    position: absolute;
+    overflow: visible;
+    width: 32px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.1px;
+}
+
+#Roll_chut__ko_xung_danh_sch {
+    display: none;
+    left: 1739px;
+    top: 730px;
+    position: absolute;
+    overflow: visible;
+    width: 116px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(183,27,9,1);
+}
+
+#Group_509 {
+    position: absolute;
+    width: 1063px;
+    height: 36px;
+    left: 300px;
+    top: 988px;
+    overflow: visible;
+    --web-animation: fadein 0.30000001192092896s ease-out;
+    --web-action-type: page;
+    --web-action-target: 4_1_Promotion_List.html;
+    cursor: pointer;
+}
+
+#Group_421_c {
+    position: absolute;
+    width: 65px;
+    height: 36px;
+    left: 909px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_300_d {
+    fill: rgba(227,233,237,1);
+}
+
+.Rectangle_300_d {
+    position: absolute;
+    overflow: visible;
+    width: 65px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Cancel_e {
+    left: 9.539px;
+    top: 7.529px;
+    position: absolute;
+    overflow: visible;
+    width: 46px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(10,10,10,1);
+    letter-spacing: 0.1px;
+}
+
+#Group_422_f {
+    position: absolute;
+    width: 60px;
+    height: 36px;
+    left: 1003px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_300_g {
+    fill: rgba(0,89,149,1);
+}
+
+.Rectangle_300_g {
+    position: absolute;
+    overflow: visible;
+    width: 60px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Save_h {
+    left: 14.408px;
+    top: 7.529px;
+    position: absolute;
+    overflow: visible;
+    width: 32px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.1px;
+}
+
+#Group_434_i {
+    position: absolute;
+    width: 70px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Rectangle_300_j {
+    fill: rgba(183,27,9,1);
+}
+
+.Rectangle_300_j {
+    position: absolute;
+    overflow: visible;
+    width: 70px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+}
+
+#Delete_k {
+    left: 14.408px;
+    top: 7.529px;
+    position: absolute;
+    overflow: visible;
+    width: 45px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.1px;
+}

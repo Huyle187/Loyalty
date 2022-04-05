@@ -11,7 +11,7 @@ namespace Loyalty.Areas.Admin.Controllers
     public class AuthController : Controller
     {
         private LoyaltyEntities db = new LoyaltyEntities();
-        private userDAO userDAO = new userDAO();
+        private productDAO userDAO = new productDAO();
 
         // GET: Admin/Auth
         public ActionResult Login()

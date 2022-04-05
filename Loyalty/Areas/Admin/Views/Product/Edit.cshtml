@@ -1,19 +1,20 @@
 ﻿@model Loyalty.Models.Product
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Update";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <link href="~/Areas/Admin/Public/css/Product/AddNewStyle.css" rel="stylesheet" />
 <script src="~/Areas/Admin/Public/js/Product/Style.js"></script>
-@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.productID)
 
     <div id="n_2_Add_Product_Fill">
+        @Html.HiddenFor(model => model.image)
         <img id="n_324" src="" @*srcset="n_324.png 1x, n_324@2x.png 2x"*@>
-
         <div id="Group_350">
             <svg class="Rectangle_307">
                 <rect id="Rectangle_307" rx="3" ry="3" x="0" y="0" width="74" height="30">
@@ -24,7 +25,7 @@
             </div>
         </div>
         <div id="New_Product_bmv">
-            <span>New Product</span>
+            <span>Update Product</span>
         </div>
         <div id="Name_bmw">
             <span>Name</span>
@@ -99,7 +100,7 @@
                 <span>>   All Product</span>
             </div>
             <div id="n___Add_new_Product">
-                <span>>   Add new Product</span>
+                <span>>   Update Product</span>
             </div>
         </div>
         <div id="PPBPC01VN_bnl">
@@ -121,6 +122,19 @@
                     @Html.HiddenFor(model => model.image, new { @class = "ImagePath" })
                 </rect>
             </div>
+            @*<div id="Icon_ionic-ios-add-circle-outl_bos">
+                    <svg class="Path_37" viewBox="10.512 10.512 14.977 14.977">
+                        <path id="Path_37" d="M 24.36328125 16.875 L 19.125 16.875 L 19.125 11.63671875 C 19.125 11.01796913146973 18.61874961853027 10.51171875 18 10.51171875 C 17.38125038146973 10.51171875 16.875 11.01796913146973 16.875 11.63671875 L 16.875 16.875 L 11.63671875 16.875 C 11.01796913146973 16.875 10.51171875 17.296875 10.51171875 18 C 10.51171875 18.703125 11.0390625 19.125 11.63671875 19.125 C 12.234375 19.125 16.875 19.125 16.875 19.125 C 16.875 19.125 16.875 23.6953125 16.875 24.36328125 C 16.875 25.03125 17.3671875 25.48828125 18 25.48828125 C 18.6328125 25.48828125 19.125 24.98203086853027 19.125 24.36328125 L 19.125 19.125 L 24.36328125 19.125 C 24.98203086853027 19.125 25.48828125 18.61874961853027 25.48828125 18 C 25.48828125 17.38125038146973 24.98203086853027 16.875 24.36328125 16.875 Z">
+                        </path>
+                    </svg>
+                    <svg class="Path_38" viewBox="3.375 3.375 29.25 29.25">
+                        <path id="Path_38" d="M 18 5.34375 C 21.38203048706055 5.34375 24.56015586853027 6.658593654632568 26.95078086853027 9.049219131469727 C 29.34140586853027 11.43984413146973 30.65625 14.61796855926514 30.65625 18 C 30.65625 21.38203048706055 29.34140586853027 24.56015586853027 26.95078086853027 26.95078086853027 C 24.56015586853027 29.34140586853027 21.38203048706055 30.65625 18 30.65625 C 14.61796855926514 30.65625 11.43984413146973 29.34140586853027 9.049219131469727 26.95078086853027 C 6.658593654632568 24.56015586853027 5.34375 21.38203048706055 5.34375 18 C 5.34375 14.61796951293945 6.658593654632568 11.43984413146973 9.049219131469727 9.049219131469727 C 11.43984413146973 6.658593654632568 14.61796855926514 5.34375 18 5.34375 M 18 3.375 C 9.921093940734863 3.375 3.375 9.921093940734863 3.375 18 C 3.375 26.07890701293945 9.921093940734863 32.625 18 32.625 C 26.07890701293945 32.625 32.625 26.07890701293945 32.625 18 C 32.625 9.921092987060547 26.07890701293945 3.375 18 3.375 L 18 3.375 Z">
+                        </path>
+                    </svg>
+                </div>*@
+            @*<div id="Add_an_image">
+                    <span>Add an image</span>
+                </div>*@
         </div>
         <div id="Group_492">
             <svg class="Rectangle_345">
@@ -301,17 +315,17 @@
         </div>
         <div id="Group_352">
             <div class="Rectangle_285_bqj">
-                <rect id="Rectangle_285_bqj" rx="3" ry="3" x="0" y="0" width="100" height="53">
-                    <button type="submit" class="btn btn-success btn-sm" style="width:100px ; height:53px">
-                        <i class="fas fa-save"></i><br /><b>Save</b>
+                <rect id="Rectangle_285_bqj" rx="3" ry="3" x="0" y="0" width="58" height="33">
+                    <button type="submit" class="btn btn-success btn-sm">
+                        <i class="fas fa-save"></i> <b>Save</b>
                     </button>
                 </rect>
             </div>
 
             <div class="Rectangle_285_bqn">
-                <rect id="Rectangle_285_bqn" rx="3" ry="3" x="0" y="0" width="100" height="53">
-                    <a class="btn btn-sm btn-info" href="@Url.Action("Index","Product")" style="width:100px ; height:53px">
-                        <i class="fas fa-backward"></i> <br /> <b>Back to List</b>
+                <rect id="Rectangle_285_bqn" rx="3" ry="3" x="0" y="0" width="77" height="33">
+                    <a class="btn btn-sm btn-info" href="@Url.Action("Index","Product")">
+                        <i class="fas fa-backward"></i> <b>Back to List</b>
                     </a>
                 </rect>
             </div>

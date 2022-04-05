@@ -12,31 +12,53 @@ namespace Loyalty.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private LoyaltyEntities db = new LoyaltyEntities();
-        private userDAO _userDAO = new userDAO();
+        private productDAO _userDAO = new productDAO();
 
         // GET: Admin/Product
         [HttpGet]
         public ActionResult Index(int? size, int? page)
         {
-            //Tạo giá trị số lượng sản phẩm muốn hiển thị lên trang
-            List<SelectListItem> items = new List<SelectListItem>();
-            items.Add(new SelectListItem { Text = "1", Value = "1" });
-            items.Add(new SelectListItem { Text = "2", Value = "2" });
-            items.Add(new SelectListItem { Text = "3", Value = "3" });
-            items.Add(new SelectListItem { Text = "4", Value = "4" });
-            items.Add(new SelectListItem { Text = "5", Value = "5" });
-            items.Add(new SelectListItem { Text = "6", Value = "6" });
-            // 1.1. Giữ trạng thái kích thước trang được chọn trên DropDownList
-            foreach (var item in items)
-            {
-                if (item.Value == size.ToString()) item.Selected = true;
-            }
+            // Tìm kiếm theo Danh sách chủ đề
+            ViewBag.ProductID = new SelectList(db.Products, "productID", "productName"); // List Product
 
-            // 1.2. Tạo các biến ViewBag
-            ViewBag.size = items; // ViewBag DropDownList
+            // Tạo các biến ViewBag
+            ViewBag.size = _userDAO.getItem(size); // ViewBag DropDownList
             ViewBag.currentSize = size; // tạo biến kích thước trang hiện tại
 
             return View(_userDAO.getList(size, page));
+        }
+
+        public ActionResult Search(int? size, int? page, string searchProduct)
+        {
+            //Check search Text
+            if (searchProduct == "")
+            {
+                return RedirectToAction("Index");
+            }
+            // Tìm kiếm theo Danh sách chủ đề
+            ViewBag.ProductID = new SelectList(db.Products, "productID", "productName"); // List Product
+
+            // Tạo các biến ViewBag
+            ViewBag.size = _userDAO.getItem(size); // ViewBag DropDownList
+            ViewBag.currentSize = size; // tạo biến kích thước trang hiện tại
+
+            return View("Index", _userDAO.Search(size, page, searchProduct));
+        }
+
+        //Search dropdownList
+        public ActionResult Filter(int? size, int? page, int productID = 0)
+        {
+            if (productID == 0)
+            {
+                return RedirectToAction("Index");
+            }
+            // Tìm kiếm theo Danh sách chủ đề
+            ViewBag.ProductID = new SelectList(db.Products, "productID", "productName"); // List Product
+            // Tạo các biến ViewBag
+            ViewBag.size = _userDAO.getItem(size); // ViewBag DropDownList
+            ViewBag.currentSize = size; // tạo biến kích thước trang hiện tại
+
+            return View("Index", _userDAO.getListSearch(size, page, productID));
         }
 
         //Add new Product
@@ -68,6 +90,49 @@ namespace Loyalty.Areas.Admin.Controllers
         }
 
         //Update Product
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var product = db.Products.FirstOrDefault(p => p.productID == id);
+            if (product == null)
+            {
+                //TempData["XMessage"] = new MyMessage("Not Fount the Product to Update!", "danger");
+                return RedirectToAction("Index");
+            }
+
+            return View(product);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Product product, HttpPostedFileBase imageProduct)
+        {
+            if (imageProduct != null)
+            {
+                //Update new Image
+                product.image = _userDAO.GetFileName(imageProduct);
+            }
+            if (product.image == null)
+            {
+                //TempData["CheckImage"] = new MyMessage("Vui lòng chọn hình ảnh", "danger");
+                return View(product);
+            }
+
+            var size = Request.Form["Size"];
+            var weight = Request.Form["weight"];
+
+            product.weight = weight;
+            product.Size = size.ToString();
+            product.importDate = DateTime.Now;
+            product.SKU = "SKUPPBPC01VN";
+
+            if (ModelState.IsValid)
+            {
+                _userDAO.Update(product);
+                //TempData["XMessage"] = new MyMessage("Update " + product.TenHang.ToUpper() + " is successfully!", "danger");
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
 
         //Delete Product
         public ActionResult Delete(int id)

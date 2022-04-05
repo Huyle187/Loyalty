@@ -1,13 +1,13 @@
 ﻿@{
-    ViewBag.Title = "Product";
+    ViewBag.Title = "Inventory";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+
 @using PagedList.Mvc;
 @using PagedList;
 @model PagedList.PagedList<Loyalty.Models.Product>
 
 <link href="~/Areas/Admin/Public/css/Product/productStyle.css" rel="stylesheet" />
-
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-light" style="background-color: #f4f6f9;border-bottom: 0px">
     <!-- Left navbar links -->
@@ -26,56 +26,54 @@
     </ul>
     <div class="others" style="flex: none">
         <li><i class="fas fa-search"></i></li>
-        <li><a class="fa fa-user" @Html.ActionLink("LOGGED IN USER", "Logout", "Auth")></a></li>
+        <li><a class="fa fa-user" @Html.ActionLink("LOGGED IN USER", "Logout", "Auth")> </a> </li>
     </div>
 </nav>
 <!-- /.navbar -->
 
 <div class="content-wrapper">
     <br />
-    <div class="col-md-6 ">
+    <div class="col-md-6" style="left:15px">
         <strong style="font-family: 'Segoe UI'">Product &ensp; </strong>
-        <strong style="font-family: 'Segoe UI'"> >&ensp; All Product</strong>
+        <strong style="font-family: 'Segoe UI'"> >&ensp; Inventory</strong>
+        <strong style="font-family: 'Segoe UI'"> >&ensp; All Inventory</strong>
     </div>
 
     <br />
     <br />
     <div class="row">
         <div class="col-md-4">
-            @using (Html.BeginForm("Filter", "Product", FormMethod.Get, new { @enctype = "multipart/form-data" }))
-            {
-                <div class="form-group">
-                    @Html.DropDownList("ProductID", null, "[Chosse Product]", htmlAttributes: new { style = "width: 40%; height: 44px" })
-                    <input type="submit" class="btn btn-secondary" value="Filter" style="stroke: grey; fill: white; height: 42px" />
-                </div>
-            }
+            <div id="All_Inventory">
+                <a href="@Url.Action("Index","Inventory")">
+                    <u>All Inventory</u>
+                </a>
+            </div>
+            <div id="Stores_Inventory">
+                <a href="@Url.Action("Store","Inventory")" style="color: black">
+                    Store's Inventory
+                </a>
+            </div>
         </div>
         <div class="col-md-8">
             <form class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-100 navbar-search"
-                  action="@Url.Action("Search", "Product")" method="get">
+                  action="@Url.Action("Search", "Inventory")" method="get">
                 <div class="input-group">
                     <div class="input-group mb-4 border rounded-pill p-1" style="background-color:white; width:700px">
                         <div class="input-group-prepend border-0">
                             <button id="button-addon4" type="submit" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
                         </div>
-                        <input type="search" name="searchProduct" placeholder="What're you searching for?" aria-describedby="button-addon4" class="form-control bg-none border-0">
+                        <input type="search" name="searchInventoryText" placeholder="What're you searching for?" aria-describedby="button-addon4" class="form-control bg-none border-0">
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <br />
-
     <div class="card-header">
         <div class="row">
             <div class="col-md-12 text-right">
-                <a class="btn btn-sm btn-success" href="@Url.Action("Create", "Product")">
-                    <i class="fas fa-plus"></i> New Product
-                </a>
-
                 <a class="btn btn-sm btn-primary" href="@Url.Action("", "")">
-                    <i class="fas fa-cloud-upload"></i> Import from csv
+                    <i class="fas fa-cloud-upload"></i> Export Data
                 </a>
             </div>
         </div>
@@ -97,16 +95,10 @@
                                     <table class="table m-0">
                                         <thead>
                                             <tr>
-                                                <th>
-                                                    <input type="checkbox" id="" name="" data-val="true" data-val-required="The IsChecked field is required." value="">
-                                                </th>
-                                                <th>Images</th>
-                                                <th>Product Name</th>
+                                                <th>Product </th>
                                                 <th>SKU</th>
-                                                <th>Inventory</th>
-                                                <th>Import Date</th>
-                                                <th></th>
-                                                <th></th>
+                                                <th>Total in Stock</th>
+                                                <th>Lasted addition</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -114,31 +106,19 @@
                                             {
                                                 <tr>
                                                     <td>
-                                                        <input type="checkbox" id="" name="" data-val="true" data-val-required="The IsChecked field is required." value="">
-                                                    </td>
-                                                    <td>
-                                                        <img src="~/Areas/Admin/Public/images/@Html.DisplayFor(modelItem => item.image)" style="width: 60px; height: 60px" />
-                                                    </td>
-                                                    <td>
                                                         @Html.DisplayFor(modelItem => item.productName)
                                                     </td>
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.SKU)
                                                     </td>
                                                     <td>
-                                                        @Html.DisplayFor(modelItem => item.oldStock) in stock
+                                                        @Html.DisplayFor(modelItem => item.oldStock)
                                                     </td>
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.importDate)
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-sm btn-info" href="@Url.Action("Edit", "Product", new { id = item.productID })">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Product", new { id = item.productID })">
-                                                            <i class="fas fa-trash"></i>
+                                                        &ensp;
+                                                        <a href="@Url.Action("Edit", "Product", new { id = item.productID })">
+                                                            <i>Edit Product</i>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -159,7 +139,7 @@
     <div class="card-footer">
         <div class="row">
             <div class="col-md-6">
-                @using (Html.BeginForm("Index", "Product", FormMethod.Get, new { @enctype = "multipart/form-data" }))
+                @using (Html.BeginForm("Index", "Inventory", FormMethod.Get, new { @enctype = "multipart/form-data" }))
                 {
                     <span>Show</span>
                     @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
@@ -188,5 +168,35 @@
     /*add background color when user hovers on inactive class*/
     .pagination a:hover:not(.active) {
         background-color: #808080;
+    }
+
+    #All_Inventory {
+        left: 30px;
+        top: 0px;
+        position: absolute;
+        overflow: visible;
+        width: 84px;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Segoe UI;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(0,89,149,1);
+    }
+
+    #Stores_Inventory {
+        left: 180px;
+        top: 0px;
+        position: absolute;
+        overflow: visible;
+        width: 84px;
+        white-space: nowrap;
+        text-align: left;
+        font-family: Segoe UI;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(0,89,149,1);
     }
 </style>

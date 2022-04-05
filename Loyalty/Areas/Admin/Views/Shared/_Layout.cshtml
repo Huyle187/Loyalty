@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
 
     <link href="~/Areas/Admin/Public/css/Style.css" rel="stylesheet" />
-
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -71,14 +71,14 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="@Url.Action("Index","Inventory")" class="nav-link">
                                     <p>Inventory</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item menu-open">
-                        <a href="#" class="nav-link">
+                        <a href="@Url.Action("Index","Campaign")" class="nav-link">
                             <i class="far fa-image"></i>
                             <p>
                                 Promontion
@@ -87,24 +87,24 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="@Url.Action("Index","Campaign")" class="nav-link">
                                     <p>All Campaign</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="@Url.Action("Index","Collection")" class="nav-link">
                                     <p>Collection</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="@Url.Action("Index","Store")" class="nav-link">
                                     <p>Store</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="@Url.Action("Index","Customer")" class="nav-link">
                             <i class="far fa-image"></i>
                             <p>
                                 Customer
