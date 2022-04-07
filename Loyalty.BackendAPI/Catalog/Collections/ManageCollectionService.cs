@@ -1,7 +1,8 @@
 ﻿using Loyalty.BackendAPI.Common;
 using Loyalty.BackendAPI.Exceptions;
 using Loyalty.BackendAPI.Models.Collections;
-using Loyalty.Models;
+using Loyalty.BackendAPI.Models.EF;
+using Loyalty.BackendAPI.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,9 +13,9 @@ namespace Loyalty.BackendAPI.Catalog.Collections
 {
     public class ManageCollectionService : IManageCollectionService
     {
-        private readonly LoyaltyEntities _loyalty;
+        private readonly LoyaltyDBContext _loyalty;
 
-        public ManageCollectionService(LoyaltyEntities loyalty)
+        public ManageCollectionService(LoyaltyDBContext loyalty)
         {
             _loyalty = loyalty;
         }
@@ -105,6 +106,22 @@ namespace Loyalty.BackendAPI.Catalog.Collections
             };
 
             return collectionViewmodel;
+        }
+
+        public async Task<List<CollectionViewModel>> GetAll()
+        {
+            var query = from c in _loyalty.Collections
+                        join p in _loyalty.Products on c.productID equals p.productID
+                        join ca in _loyalty.Campaigns on c.campaignID equals ca.campaignID
+                        select new { c, p, ca };
+            var data = await query
+                       .Select(x => new CollectionViewModel()
+                       {
+                           collectionName = x.c.collectionName,
+                           campaignName = x.ca.campaignName,
+                           stock = x.p.oldStock,
+                       }).ToListAsync();
+            return data;
         }
     }
 }

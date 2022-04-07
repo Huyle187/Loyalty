@@ -13,6 +13,8 @@ namespace Loyalty.BackendAPI.Catalog.Collections
 
         Task<CollectionViewModel> GetById(int collectionID);
 
+        Task<List<CollectionViewModel>> GetAll();
+
         Task<int> Create(CollectionRequest request);
 
         Task<int> Update(CollectionRequest request);

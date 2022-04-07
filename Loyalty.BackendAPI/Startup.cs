@@ -1,4 +1,5 @@
 using Loyalty.BackendAPI.Catalog.Collections;
+using Loyalty.BackendAPI.Models.EF;
 using Loyalty.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +30,18 @@ namespace Loyalty.BackendAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<LoyaltyEntities>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("LoyaltyDB")));
+            services.AddDbContext<LoyaltyDBContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("LoyaltyDB")));
 
             //Declare DI
             services.AddTransient<IManageCollectionService, ManageCollectionService>();
 
-            services.AddControllers();
+            services.AddControllersWithViews();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Loyalty", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,12 +58,12 @@ namespace Loyalty.BackendAPI
 
             app.UseAuthorization();
 
-            //app.UseSwagger();
+            app.UseSwagger();
 
-            //app.UseSwaggerUI(c =>
-            //{
-            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Loyalty");
-            //});
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Loyalty");
+            });
 
             app.UseEndpoints(endpoints =>
             {

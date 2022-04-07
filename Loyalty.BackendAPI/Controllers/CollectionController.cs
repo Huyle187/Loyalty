@@ -20,6 +20,13 @@ namespace Loyalty.BackendAPI.Controllers
             _manageCollectionService = manageCollectionService;
         }
 
+        [HttpGet("public-getAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            var collections = await _manageCollectionService.GetAll();
+            return Ok(collections);
+        }
+
         [HttpGet("public-paging")]
         public async Task<IActionResult> GetAllPaging([FromQuery] GetManageCollectionPagingRequest request)
         {

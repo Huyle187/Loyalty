@@ -1,5 +1,4 @@
-﻿using Loyalty.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -10,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Loyalty.BackendAPI.Models.EF
 {
-    public class LoyaltyDBContextFactory : IDesignTimeDbContextFactory<LoyaltyEntities>
+    public class LoyaltyDBContextFactory : IDesignTimeDbContextFactory<LoyaltyDBContext>
     {
-        public LoyaltyEntities CreateDbContext(string[] args)
+        public LoyaltyDBContext CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -21,10 +20,10 @@ namespace Loyalty.BackendAPI.Models.EF
 
             var connectionString = configuration.GetConnectionString("LoyaltyDB");
 
-            var optionsBuilder = new DbContextOptionsBuilder<LoyaltyEntities>();
+            var optionsBuilder = new DbContextOptionsBuilder<LoyaltyDBContext>();
             optionsBuilder.UseSqlServer(connectionString);
 
-            return new LoyaltyEntities(optionsBuilder.Options);
+            return new LoyaltyDBContext(optionsBuilder.Options);
         }
     }
 }

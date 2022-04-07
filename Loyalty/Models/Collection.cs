@@ -27,7 +27,7 @@ namespace Loyalty.Models
         public Nullable<int> campaignID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Campaign> Campaigns { get; set; }
+        public ICollection<Campaign> Campaigns { get; set; }
         public virtual Campaign Campaign { get; set; }
         public virtual Product Product { get; set; }
     }
