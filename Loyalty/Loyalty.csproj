@@ -136,10 +136,12 @@
     <Compile Include="Areas\Admin\Controllers\AuthController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CampaignController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CollectionController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\InventoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\DAO\campaignDAO.cs" />
+    <Compile Include="Areas\Admin\DAO\CollectionDAO.cs" />
     <Compile Include="Areas\Admin\DAO\inventoryDAO.cs" />
     <Compile Include="Areas\Admin\DAO\productDAO.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -187,6 +189,7 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Public\css\Campagin\campaginStyle.css" />
     <Content Include="Areas\Admin\Public\css\Campagin\createStyle.css" />
+    <Content Include="Areas\Admin\Public\css\Collection\createStyle.css" />
     <Content Include="Areas\Admin\Public\css\daterangepicker.css" />
     <Content Include="Areas\Admin\Public\css\Product\AddNewStyle.css" />
     <Content Include="Areas\Admin\Public\css\Product\productStyle.css" />
@@ -267,6 +270,8 @@
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Campaign\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Inventory\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Collection\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Collection\create.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

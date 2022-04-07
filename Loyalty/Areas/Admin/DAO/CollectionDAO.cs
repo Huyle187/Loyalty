@@ -4,15 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
 namespace Loyalty.Areas.Admin.DAO
 {
-    public class campaignDAO
+    public class CollectionDAO
     {
         private LoyaltyEntities db = new LoyaltyEntities();
 
-        public IPagedList<Campaign> getList(int? size, int? page)
+        public IPagedList<Collection> getList(int? size, int? page)
         {
             // Nếu page = null thì đặt lại là 1.
             page = page ?? 1; //if (page == null) page = 1;
@@ -26,19 +25,19 @@ namespace Loyalty.Areas.Admin.DAO
             int pageNumber = (page ?? 1);
 
             // Lấy tổng sồ record chia cho kích thước để biết bao nhiêu trang
-            int total = (int)(db.Campaigns.ToList().Count / pageSize) + 1;
+            int total = (int)(db.Collections.ToList().Count / pageSize) + 1;
             //Nếu số trang vượt quá tổng số trang thì gán là 1 hoặc bằng tổng số trang
             if (pageNumber > total)
                 pageNumber = total;
 
-            var list = db.Campaigns
+            var list = db.Collections
                     .ToList()
                     .OrderBy(m => m.campaignID)
                     .ToPagedList(pageNumber, pageSize);
             return list;
         }
 
-        public IPagedList<Campaign> getListSearch(int? size, int? page, int campaignID)
+        public IPagedList<Collection> getListSearch(int? size, int? page, int campaignID)
         {
             // Nếu page = null thì đặt lại là 1.
             page = page ?? 1; //if (page == null) page = 1;
@@ -52,12 +51,12 @@ namespace Loyalty.Areas.Admin.DAO
             int pageNumber = (page ?? 1);
 
             // Lấy tổng sồ record chia cho kích thước để biết bao nhiêu trang
-            int total = (int)(db.Campaigns.ToList().Count / pageSize) + 1;
+            int total = (int)(db.Collections.ToList().Count / pageSize) + 1;
             //Nếu số trang vượt quá tổng số trang thì gán là 1 hoặc bằng tổng số trang
             if (pageNumber > total)
                 pageNumber = total;
 
-            var list = db.Campaigns
+            var list = db.Collections
                     .Where(p => p.campaignID == campaignID)
                     .ToList()
                     .OrderBy(m => m.campaignID)
@@ -65,7 +64,7 @@ namespace Loyalty.Areas.Admin.DAO
             return list;
         }
 
-        public IPagedList<Campaign> Search(int? size, int? page, string searchCampaignText)
+        public IPagedList<Collection> Search(int? size, int? page, string searchCollectText)
         {
             // Nếu page = null thì đặt lại là 1.
             page = page ?? 1; //if (page == null) page = 1;
@@ -84,12 +83,11 @@ namespace Loyalty.Areas.Admin.DAO
             if (pageNumber > total)
                 pageNumber = total;
 
-            var list = db.Campaigns
-                    .Where(p => p.campaignName.Contains(searchCampaignText) ||
-                                p.typeCampagin.Contains(searchCampaignText) ||
-                                p.Status.Contains(searchCampaignText))
+            var list = db.Collections
+                    .Where(p => p.collectionName.Contains(searchCollectText) ||
+                                p.Campaign.campaignName.Contains(searchCollectText))
                     .ToList()
-                    .OrderBy(m => m.campaignID)
+                    .OrderBy(m => m.collectionID)
                     .ToPagedList(pageNumber, pageSize);
             return list;
         }
