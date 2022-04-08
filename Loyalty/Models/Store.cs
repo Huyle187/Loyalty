@@ -30,11 +30,9 @@ namespace Loyalty.Models
         public string District { get; set; }
         public string Ward { get; set; }
         public string Address { get; set; }
-        public Nullable<int> campaignID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Campaign> Campaigns { get; set; }
-        public virtual Campaign Campaign { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customers { get; set; }
     }
