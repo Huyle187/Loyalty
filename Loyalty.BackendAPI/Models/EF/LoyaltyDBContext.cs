@@ -1,5 +1,4 @@
-﻿using Loyalty.BackendAPI.Models.Configurations;
-using Loyalty.BackendAPI.Models.Entities;
+﻿using Loyalty.BackendAPI.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,5 +17,6 @@ namespace Loyalty.BackendAPI.Models.EF
         public DbSet<Campaign> Campaign { get; set; }
         public DbSet<Collection> Collection { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Store> Store { get; set; }
     }
 }

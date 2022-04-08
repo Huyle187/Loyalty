@@ -1,4 +1,5 @@
 using Loyalty.BackendAPI.Catalog.Collections;
+using Loyalty.BackendAPI.Catalog.Stores;
 using Loyalty.BackendAPI.Models.EF;
 using Loyalty.BackendAPI.Models.Entities;
 using Loyalty.Models;
@@ -37,6 +38,7 @@ namespace Loyalty.BackendAPI
 
             //Declare DI
             services.AddTransient<IManageCollectionService, ManageCollectionService>();
+            services.AddTransient<IManageStoreService, ManageStoreService>();
 
             services.AddControllersWithViews();
 

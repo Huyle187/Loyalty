@@ -42,13 +42,13 @@ namespace Loyalty.BackendAPI.Controllers
             return Ok(collections);
         }
 
-        [HttpGet("{collectionId}")]
-        public async Task<IActionResult> GetById(int productId)
+        [HttpGet("get/{collectionId}")]
+        public async Task<IActionResult> GetById(int collectionId)
         {
-            var product = await _manageCollectionService.GetById(productId);
-            if (product == null)
+            var collections = await _manageCollectionService.GetById(collectionId);
+            if (collections == null)
                 return BadRequest("Cannot find product");
-            return Ok(product);
+            return Ok(collections);
         }
 
         [HttpPost("Create")]
@@ -61,9 +61,9 @@ namespace Loyalty.BackendAPI.Controllers
             var collectionId = await _manageCollectionService.Create(request);
             if (collectionId == 0)
                 return BadRequest();
-            var product = await _manageCollectionService.GetById(collectionId);
+            var collection = await _manageCollectionService.GetById(collectionId);
 
-            return CreatedAtAction(nameof(GetById), new { id = collectionId }, product);
+            return CreatedAtAction(nameof(GetById), new { id = collectionId }, collection);
         }
 
         [HttpPut("Update/{collectionID}")]

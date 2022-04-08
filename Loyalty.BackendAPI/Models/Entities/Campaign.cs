@@ -18,7 +18,7 @@ namespace Loyalty.BackendAPI.Models.Entities
         public int storeID { get; set; }
 
         public Product Product { get; set; }
-
+        public virtual Store Store { get; set; }
         public ICollection<Collection> Collection { get; set; }
     }
 }

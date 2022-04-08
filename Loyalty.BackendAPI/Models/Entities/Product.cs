@@ -26,5 +26,6 @@ namespace Loyalty.BackendAPI.Models.Entities
 
         public ICollection<Campaign> Campaign { get; set; }
         public ICollection<Collection> Collection { get; set; }
+        //public virtual ICollection<Customer> Customer { get; set; }
     }
 }
