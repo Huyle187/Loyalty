@@ -11,14 +11,14 @@ namespace Loyalty.BackendAPI.Models.Entities
         public string campaignName { get; set; }
         public string Market { get; set; }
         public string typeCampagin { get; set; }
-        public Nullable<System.DateTime> startDate { get; set; }
-        public Nullable<System.DateTime> endDate { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
         public string Status { get; set; }
-        public Nullable<int> productID { get; set; }
-        public Nullable<int> collectionID { get; set; }
-        public Nullable<int> storeID { get; set; }
+        public int productID { get; set; }
+        public int storeID { get; set; }
 
-        public List<Collection> Collections { get; set; }
-        public List<Product> Products { get; set; }
+        public Product Product { get; set; }
+
+        public ICollection<Collection> Collection { get; set; }
     }
 }

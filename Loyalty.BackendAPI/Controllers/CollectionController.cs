@@ -1,5 +1,6 @@
 ﻿using Loyalty.BackendAPI.Catalog.Collections;
 using Loyalty.BackendAPI.Models.Collections;
+using Loyalty.BackendAPI.Models.EF;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -25,6 +26,13 @@ namespace Loyalty.BackendAPI.Controllers
         {
             var collections = await _manageCollectionService.GetAll();
             return Ok(collections);
+
+            //var col = await _loyalty.Collections.Select(a => new CollectionViewModel()
+            //{
+            //    collectionName = a.collectionName,
+            //    typeCollection = a.typeCollection
+            //}).ToListAsync();
+            //return Ok(col);
         }
 
         [HttpGet("public-paging")]
@@ -43,8 +51,8 @@ namespace Loyalty.BackendAPI.Controllers
             return Ok(product);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromForm] CollectionRequest request)
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create([FromForm] CollectionCreateRequest request)
         {
             if (!ModelState.IsValid)
             {
@@ -58,21 +66,21 @@ namespace Loyalty.BackendAPI.Controllers
             return CreatedAtAction(nameof(GetById), new { id = collectionId }, product);
         }
 
-        [HttpPut("{collectionId}")]
-        public async Task<IActionResult> Update([FromForm] CollectionRequest request)
+        [HttpPut("Update/{collectionId}")]
+        public async Task<IActionResult> Update([FromForm] CollectionUpdateRequest request, int collectionID)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var affectedResult = await _manageCollectionService.Update(request);
+            var affectedResult = await _manageCollectionService.Update(request, collectionID);
             if (affectedResult == 0)
                 return BadRequest();
 
             return Ok();
         }
 
-        [HttpDelete("{collectionId}")]
+        [HttpDelete("Delete/{collectionId}")]
         public async Task<IActionResult> Delete(int collectionId)
         {
             var affectedResult = await _manageCollectionService.Delete(collectionId);

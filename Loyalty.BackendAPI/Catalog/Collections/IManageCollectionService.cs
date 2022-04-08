@@ -15,9 +15,9 @@ namespace Loyalty.BackendAPI.Catalog.Collections
 
         Task<List<CollectionViewModel>> GetAll();
 
-        Task<int> Create(CollectionRequest request);
+        Task<int> Create(CollectionCreateRequest request);
 
-        Task<int> Update(CollectionRequest request);
+        Task<int> Update(CollectionUpdateRequest request, int collectionID);
 
         Task<int> Delete(int collectionID);
     }

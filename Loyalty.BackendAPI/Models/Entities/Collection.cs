@@ -10,8 +10,8 @@ namespace Loyalty.BackendAPI.Models.Entities
         public int collectionID { get; set; }
         public string collectionName { get; set; }
         public string typeCollection { get; set; }
-        public Nullable<int> productID { get; set; }
-        public Nullable<int> campaignID { get; set; }
+        public int productID { get; set; }
+        public int campaignID { get; set; }
 
         public Campaign Campaign { get; set; }
         public Product Product { get; set; }
