@@ -184,6 +184,9 @@
     <Compile Include="Models\Store.cs">
       <DependentUpon>LoyaltyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>LoyaltyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -257,13 +260,6 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\LoyaltyModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LoyaltyModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\LoyaltyModel.edmx.diagram">
-      <DependentUpon>LoyaltyModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\Inventory\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Inventory\Store.cshtml" />
     <Content Include="Areas\Admin\Views\Campaign\Index.cshtml" />
@@ -272,6 +268,13 @@
     <Content Include="Areas\Admin\Views\Inventory\Update.cshtml" />
     <Content Include="Areas\Admin\Views\Collection\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Collection\create.cshtml" />
+    <EntityDeploy Include="Models\LoyaltyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LoyaltyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LoyaltyModel.edmx.diagram">
+      <DependentUpon>LoyaltyModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

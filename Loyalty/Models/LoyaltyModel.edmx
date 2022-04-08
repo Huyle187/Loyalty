@@ -28,7 +28,6 @@
           <Property Name="endDate" Type="datetime" />
           <Property Name="Status" Type="varchar" MaxLength="30" />
           <Property Name="productID" Type="int" />
-          <Property Name="collectionID" Type="int" />
           <Property Name="storeID" Type="int" />
         </EntityType>
         <EntityType Name="Collection">
@@ -99,20 +98,17 @@
           <Property Name="District" Type="nvarchar" MaxLength="20" />
           <Property Name="Ward" Type="nvarchar" MaxLength="20" />
           <Property Name="Address" Type="nvarchar" MaxLength="200" />
-          <Property Name="campaignID" Type="int" />
         </EntityType>
-        <Association Name="FK_Campaign_Collection">
-          <End Role="Collection" Type="Self.Collection" Multiplicity="0..1" />
-          <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Collection">
-              <PropertyRef Name="collectionID" />
-            </Principal>
-            <Dependent Role="Campaign">
-              <PropertyRef Name="collectionID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <Association Name="FK_Campaign_Product">
           <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
           <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
@@ -197,18 +193,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Store_Campaign">
-          <End Role="Campaign" Type="Self.Campaign" Multiplicity="0..1" />
-          <End Role="Store" Type="Self.Store" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Campaign">
-              <PropertyRef Name="campaignID" />
-            </Principal>
-            <Dependent Role="Store">
-              <PropertyRef Name="campaignID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="LoyaltyModelStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Campaign" EntityType="Self.Campaign" Schema="dbo" store:Type="Tables" />
@@ -217,10 +201,7 @@
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductImages" EntityType="Self.ProductImages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Store" EntityType="Self.Store" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Campaign_Collection" Association="Self.FK_Campaign_Collection">
-            <End Role="Collection" EntitySet="Collection" />
-            <End Role="Campaign" EntitySet="Campaign" />
-          </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Campaign_Product" Association="Self.FK_Campaign_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Campaign" EntitySet="Campaign" />
@@ -248,10 +229,6 @@
           <AssociationSet Name="FK_ProductImages_Product" Association="Self.FK_ProductImages_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductImages" EntitySet="ProductImages" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Store_Campaign" Association="Self.FK_Store_Campaign">
-            <End Role="Campaign" EntitySet="Campaign" />
-            <End Role="Store" EntitySet="Store" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -282,13 +259,10 @@
           <Property Name="endDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="productID" Type="Int32" />
-          <Property Name="collectionID" Type="Int32" />
           <Property Name="storeID" Type="Int32" />
-          <NavigationProperty Name="Collection" Relationship="Self.FK_Campaign_Collection" FromRole="Campaign" ToRole="Collection" />
           <NavigationProperty Name="Product" Relationship="Self.FK_Campaign_Product" FromRole="Campaign" ToRole="Product" />
           <NavigationProperty Name="Store" Relationship="Self.FK_Campaign_Store" FromRole="Campaign" ToRole="Store" />
           <NavigationProperty Name="Collections" Relationship="Self.FK_Collection_Campaign" FromRole="Campaign" ToRole="Collection" />
-          <NavigationProperty Name="Stores" Relationship="Self.FK_Store_Campaign" FromRole="Campaign" ToRole="Store" />
         </EntityType>
         <EntityType Name="Collection">
           <Key>
@@ -299,7 +273,6 @@
           <Property Name="typeCollection" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="productID" Type="Int32" />
           <Property Name="campaignID" Type="Int32" />
-          <NavigationProperty Name="Campaigns" Relationship="Self.FK_Campaign_Collection" FromRole="Collection" ToRole="Campaign" />
           <NavigationProperty Name="Campaign" Relationship="Self.FK_Collection_Campaign" FromRole="Collection" ToRole="Campaign" />
           <NavigationProperty Name="Product" Relationship="Self.FK_Collection_Product" FromRole="Collection" ToRole="Product" />
         </EntityType>
@@ -368,23 +341,19 @@
           <Property Name="District" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Ward" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="campaignID" Type="Int32" />
           <NavigationProperty Name="Campaigns" Relationship="Self.FK_Campaign_Store" FromRole="Store" ToRole="Campaign" />
-          <NavigationProperty Name="Campaign" Relationship="Self.FK_Store_Campaign" FromRole="Store" ToRole="Campaign" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customer_Store" FromRole="Store" ToRole="Customer" />
         </EntityType>
-        <Association Name="FK_Campaign_Collection">
-          <End Role="Collection" Type="Self.Collection" Multiplicity="0..1" />
-          <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Collection">
-              <PropertyRef Name="collectionID" />
-            </Principal>
-            <Dependent Role="Campaign">
-              <PropertyRef Name="collectionID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <Association Name="FK_Campaign_Product">
           <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
           <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
@@ -417,18 +386,6 @@
               <PropertyRef Name="campaignID" />
             </Principal>
             <Dependent Role="Collection">
-              <PropertyRef Name="campaignID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Store_Campaign">
-          <End Role="Campaign" Type="Self.Campaign" Multiplicity="0..1" />
-          <End Role="Store" Type="Self.Store" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Campaign">
-              <PropertyRef Name="campaignID" />
-            </Principal>
-            <Dependent Role="Store">
               <PropertyRef Name="campaignID" />
             </Dependent>
           </ReferentialConstraint>
@@ -489,10 +446,7 @@
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="ProductImages" EntityType="Self.ProductImage" />
           <EntitySet Name="Stores" EntityType="Self.Store" />
-          <AssociationSet Name="FK_Campaign_Collection" Association="Self.FK_Campaign_Collection">
-            <End Role="Collection" EntitySet="Collections" />
-            <End Role="Campaign" EntitySet="Campaigns" />
-          </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_Campaign_Product" Association="Self.FK_Campaign_Product">
             <End Role="Product" EntitySet="Products" />
             <End Role="Campaign" EntitySet="Campaigns" />
@@ -504,10 +458,6 @@
           <AssociationSet Name="FK_Collection_Campaign" Association="Self.FK_Collection_Campaign">
             <End Role="Campaign" EntitySet="Campaigns" />
             <End Role="Collection" EntitySet="Collections" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Store_Campaign" Association="Self.FK_Store_Campaign">
-            <End Role="Campaign" EntitySet="Campaigns" />
-            <End Role="Store" EntitySet="Stores" />
           </AssociationSet>
           <AssociationSet Name="FK_Collection_Product" Association="Self.FK_Collection_Product">
             <End Role="Product" EntitySet="Products" />
@@ -554,7 +504,6 @@
                 <ScalarProperty Name="endDate" ColumnName="endDate" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="productID" ColumnName="productID" />
-                <ScalarProperty Name="collectionID" ColumnName="collectionID" />
                 <ScalarProperty Name="storeID" ColumnName="storeID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -630,7 +579,17 @@
                 <ScalarProperty Name="District" ColumnName="District" />
                 <ScalarProperty Name="Ward" ColumnName="Ward" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="campaignID" ColumnName="campaignID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="LoyaltyModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

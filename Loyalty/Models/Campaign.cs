@@ -18,7 +18,6 @@ namespace Loyalty.Models
         public Campaign()
         {
             this.Collections = new HashSet<Collection>();
-            this.Stores = new HashSet<Store>();
         }
     
         public int campaignID { get; set; }
@@ -29,15 +28,11 @@ namespace Loyalty.Models
         public Nullable<System.DateTime> endDate { get; set; }
         public string Status { get; set; }
         public Nullable<int> productID { get; set; }
-        public Nullable<int> collectionID { get; set; }
         public Nullable<int> storeID { get; set; }
     
-        public virtual Collection Collection { get; set; }
         public virtual Product Product { get; set; }
         public virtual Store Store { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Collection> Collections { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Store> Stores { get; set; }
     }
 }

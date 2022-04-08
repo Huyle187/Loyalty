@@ -12,15 +12,12 @@ namespace Loyalty.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Collection
+    public partial class sysdiagram
     {
-        public int collectionID { get; set; }
-        public string collectionName { get; set; }
-        public string typeCollection { get; set; }
-        public Nullable<int> productID { get; set; }
-        public Nullable<int> campaignID { get; set; }
-    
-        public virtual Campaign Campaign { get; set; }
-        public virtual Product Product { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
