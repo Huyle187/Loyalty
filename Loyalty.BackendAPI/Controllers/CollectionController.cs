@@ -66,7 +66,7 @@ namespace Loyalty.BackendAPI.Controllers
             return CreatedAtAction(nameof(GetById), new { id = collectionId }, product);
         }
 
-        [HttpPut("Update/{collectionId}")]
+        [HttpPut("Update/{collectionID}")]
         public async Task<IActionResult> Update([FromForm] CollectionUpdateRequest request, int collectionID)
         {
             if (!ModelState.IsValid)
